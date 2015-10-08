@@ -1,0 +1,12 @@
+@	IN	SOA	dolly.pp24.polarparty.no. hostmaster.polarparty.no (
+			2015092901 ; Serial
+			14400		; Refresh
+			3600		; Retry
+			604800		; Expire
+			10800		; Minimum
+)
+
+176.90.193.in-addr.arpa		IN	NS	dolly.pp24.polarparty.no.
+
+
+1				IN	PTR	gw-rad1.centerGW.pp24.polarparty.no.

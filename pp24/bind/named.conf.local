@@ -1,0 +1,32 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "pp24.polarparty.no" {
+	type master;
+	file "/etc/bind/db.d/pp24.polarparty.no";
+};
+
+zone "176.90.193.in-addr.arpa" {
+	type master;
+	file "/etc/bind/db.d/176.90.193.in-addr.arpa";
+};
+
+zone "177.90.193.in-addr.arpa" {
+        type master;
+        file "/etc/bind/db.d/177.90.193.in-addr.arpa";
+};
+
+zone "178.90.193.in-addr.arpa" {
+        type master;
+        file "/etc/bind/db.d/178.90.193.in-addr.arpa";
+};
+zone "179.90.193.in-addr.arpa" {
+        type master;
+        file "/etc/bind/db.d/179.90.193.in-addr.arpa";
+};
+

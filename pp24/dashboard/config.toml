@@ -1,0 +1,16 @@
+[http]
+port = ":80"
+
+[misc]
+interval = 5
+
+[uplink]
+ip = "tekniskgw.pp24.polarparty.no"
+community = "pp24"
+inByte = ".1.3.6.1.2.1.31.1.1.1.6.663"
+outByte = ".1.3.6.1.2.1.31.1.1.1.10.663"
+maxSpeed = 4294967296
+
+[dhcp]
+ip = "127.0.0.1:16100"
+community = "public"

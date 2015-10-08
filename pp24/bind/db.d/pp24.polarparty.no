@@ -1,0 +1,53 @@
+$ORIGIN pp24.polarparty.no.
+$TTL 86400   ; 24 hour
+@                               IN SOA dolly.pp24.polarparty.no.   pp24teknisk.polarparty.no. (
+                                    2015093002  ; serial yyyymmdd##
+                                    3600        ; refresh ( 1 hour )
+                                    1800        ; retry ( 30 minutes )
+                                    608400      ; expire ( 1 week 1 hour )
+                                    3600        ;   minimum ( 1 hour )
+                                    )
+                                IN NS  dolly.pp24.polarparty.no.
+
+@		IN	A	195.204.156.9 
+
+fantonald	IN	A	195.204.156.4
+ole		IN	A	195.204.156.5
+dole		IN	A	195.204.156.6
+doffen		IN	A	195.204.156.7
+xoa		IN	A	195.204.156.8
+dolly		IN	A	195.204.156.9
+donald		IN	A	195.204.156.10
+pluto		IN	A	195.204.156.12
+mikke		IN	A	195.204.156.13
+skrue		IN	A	195.204.156.14
+innlevering	IN	A	195.204.156.16
+dashboard	IN	A	195.204.156.17
+mccrea		IN	CNAME	mc7.spillvert.no.
+mcarena		IN	CNAME	mc7.spillvert.no.
+macarena	IN	CNAME	mc7.spillvert.no.
+psychic		IN	CNAME	mikke.pp24.polarparty.no.
+csgo		IN	A	193.202.115.74
+fiks		IN	A	195.204.156.18
+
+innlevering	IN	A	195.204.156.16 ;; Change if need be
+
+;; switcher
+tekniskgw	IN	A	195.204.156.241
+westgw		IN	A	195.204.156.242
+eastgw		IN	A	195.204.156.243
+centergw	IN	A	195.204.156.244
+hovedscenesw	IN	A	10.70.101.10
+gamescenesw	IN	A	10.70.101.11
+superdesksw	IN	A	10.70.101.12
+
+
+;; Zonedirector er WLAN-controller, navn for auto discover
+zonedirector	IN	A	10.80.0.90
+WLANCTRL01	IN	A	10.80.0.91
+WLANAP01	IN	A	10.80.30.10
+WLANAP02	IN	A	10.80.30.26
+WLANAP03	IN	A	10.80.30.27
+
+;; Printere
+kjokken		IN	A	10.70.1.26
