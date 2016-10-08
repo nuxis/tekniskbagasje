@@ -1,0 +1,18 @@
+version: '2'
+services:
+  p0sx1:
+    image: registry.fap.no/p0sx/p0sx:1.0.14
+    volumes:
+      - ./prod.py:/srv/app/p0sx/settings/prod.py
+      - ./media:/srv/app/media
+    ports:
+      - "8308:8080"
+    restart: always
+  p0sx2:
+    image: registry.fap.no/p0sx/p0sx:1.0.15
+    volumes:
+      - ./prod.py:/srv/app/p0sx/settings/prod.py
+      - ./media:/srv/app/media
+    ports:
+      - "8309:8080"
+    restart: always

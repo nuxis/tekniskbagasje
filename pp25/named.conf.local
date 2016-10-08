@@ -1,0 +1,15 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "pp25.polarparty.no" {
+	type master;
+	notify yes;
+	allow-transfer {195.159.66.54;};
+	also-notify {195.159.66.54;};
+	file "/etc/bind/db.d/pp25.polarparty.no";
+};

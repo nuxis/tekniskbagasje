@@ -1,0 +1,41 @@
+$ORIGIN pp25.polarparty.no.
+$TTL 86400   ; 24 hour
+@                               IN SOA bradley.pp25.polarparty.no.   pp25teknisk.polarparty.no. (
+                                    2016100706  ; serial yyyymmdd##
+                                    3600        ; refresh ( 1 hour )
+                                    1800        ; retry ( 30 minutes )
+                                    608400      ; expire ( 1 week 1 hour )
+                                    3600        ;   minimum ( 1 hour )
+                                    )
+                                IN NS  bradley.pp25.polarparty.no.
+@		IN	A	193.214.34.130
+
+bradley		IN	A	193.214.34.130
+flynn		IN	A	193.214.34.131
+zed		IN	A	193.214.34.133
+ernie		IN	A	193.214.34.134
+beck		IN	A	193.214.34.132
+vwlc		IN	A	193.214.34.137
+zarek		IN	A	193.214.34.135
+
+; Switcher
+tekniskgw	IN	A	193.214.38.254
+eastgw		IN	A	193.214.38.253
+westgw		IN	A	193.214.38.252
+centergw	IN	A	193.214.38.251
+tekniskrom	IN	A	193.214.38.250
+scenesw		IN	A	193.214.38.249
+superdesksw	IN	A	193.214.38.248
+
+nettbrett	IN 	A	193.214.34.133
+p0sx		IN	A	193.214.34.133
+p0sxo		IN	A	193.214.34.133
+nms		IN	A	193.214.34.134
+psql		IN	A	193.214.34.132
+nsa		IN	A	193.214.34.188
+psychic		IN	CNAME	hh1.nuxis.org.
+
+cisco-lwapp-controller IN A	193.214.34.137
+CISCO-CAPWAP-CONTROLLER IN A	193.214.34.137
+
+videorender	IN	A	104.155.124.41
