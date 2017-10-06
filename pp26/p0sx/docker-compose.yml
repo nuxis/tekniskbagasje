@@ -1,0 +1,22 @@
+version: '3'
+services:
+  p0sX:
+    image: 'p0sx:1.0.18'
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    volumes:
+      - ./prod.py:/srv/app/p0sx/settings/prod.py
+      - ./media:/srv/app/media
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:9.6-alpine
+    volumes:
+      - postgres-database:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: p0sx_pp26
+      POSTGRES_PASSWORD: 
+volumes:
+    postgres-database:
+      driver: local
