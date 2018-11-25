@@ -1,0 +1,16 @@
+site,group_name,vid,name,tenant,status,role,description
+GlobeLAN 30,,100,Crew,,Active,,4/2
+GlobeLAN 30,,110,Kiosk,,Active,,4/3
+GlobeLAN 30,,301,Rad1,,Active,,4/4
+GlobeLAN 30,,302,Rad2,,Active,,4/5
+GlobeLAN 30,,303,Rad3,,Active,,4/6
+GlobeLAN 30,,304,Rad4,,Active,,4/7
+GlobeLAN 30,,305,Rad5,,Active,,4/8
+GlobeLAN 30,,306,Rad6,,Active,,4/9
+GlobeLAN 30,,307,Rad7,,Active,,4/10
+GlobeLAN 30,,308,Rad8,,Active,,4/11
+GlobeLAN 30,,309,Rad9,,Active,,4/12
+GlobeLAN 30,,310,Rad10,,Active,,4/13
+GlobeLAN 30,,311,Rad11,,Active,,4/16
+GlobeLAN 30,,802,WLAN,,Active,,4/14
+GlobeLAN 30,,1337,Tech,,Active,,4/15

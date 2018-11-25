@@ -1,0 +1,796 @@
+!Current Configuration:
+
+!
+
+!System Description "FASTPATH Routing"
+
+!System Software Version "5.13.12.14"
+
+!System Up Time          "1 days 3 hrs 21 mins 39 secs"
+
+!Additional Packages     FASTPATH QOS,FASTPATH Multicast
+
+!Current SNTP Synchronized Time: Not Synchronized
+
+!
+
+set prompt "hofsw2-hall"
+
+enable passwd encrypted 1ea0b10ca278fd5ed343da39957da474bb09ef6af57ff4f8bda5c486b58498370b6bc19d63c57767a1da22ccb817ce445cda5240faf19033fd29b3d02d4e59ac
+
+network parms 172.16.4.3 255.255.0.0 0.0.0.0
+
+network mgmt_vlan 5
+
+vlan database
+
+vlan 5,100,110,301-311,802,1337-1338
+
+vlan routing 1338
+
+vlan routing 100
+
+vlan routing 110
+
+vlan routing 301
+
+vlan routing 302
+
+vlan routing 303
+
+vlan routing 304
+
+vlan routing 305
+
+vlan routing 306
+
+vlan routing 307
+
+vlan routing 308
+
+vlan routing 309
+
+vlan routing 310
+
+vlan routing 802
+
+vlan routing 1337
+
+vlan routing 311
+
+exit
+
+no ip http java
+
+ip ssh server enable
+
+ip ssh protocol 2
+
+configure
+
+!
+
+logging host 151.216.10.2 ipv4 514 notice
+
+logging syslog
+
+logging cli-command
+
+ip routing
+
+ip route 0.0.0.0 0.0.0.0 185.125.170.17
+
+bootpdhcprelay enable
+
+bootpdhcprelay minwaittime 2
+
+bootpdhcprelay serverip 151.216.10.2
+
+users passwd "admin" encrypted 9bbac0917d24cda4abc91e0b3a2e762c564215b88662d4bd6660163d68eb6f6b8caf1e707a1d5730c37b8a5526b379f5ac3ca9761c4debee1d062e97edce2709
+
+users passwd "guest" encrypted 928336800ccca32a4c218d5e93108e70239a6a11664300a29598ec3b4771b69fd1711bcccd59d465b2309c18879c50347d786118e6d332a4b21b337c620dcc5c
+
+users name "mathiasn" accessmode "readwrite"
+
+users passwd "mathiasn" encrypted ce3396c147e2fea15b16f4d472feb1c6d239fdb0daa82b3d8fb2a0bfbf5a9c1dd4391db77303f3bcd7310bc18bb85bde61d272571d1d798c06ae00c1d14be23f
+
+users name "alfa" accessmode "readwrite"
+
+users passwd "alfa" encrypted 54c8110f0c4deb3fdf0b02a8c9c71f6441dd69b618849b0a5fec8058b76318fd3084225ba589b40e8d2fcd3d5011d2214df76ededeae623ec1845543a57bae30
+
+lineconfig
+
+exit
+
+spanning-tree configuration name "60-EB-69-A9-1A-D0"
+
+access-list 10 permit 172.16.0.0 255.255.0.0
+
+access-list 10 permit 185.125.169.4 255.255.255.255
+
+access-list 10 permit 92.220.243.186 255.255.255.255
+
+access-list 10 permit 185.125.168.10 255.255.255.255
+
+access-list 10 permit 151.216.8.0 255.255.248.0
+
+access-list 10 deny every
+
+ip access-group 10 vlan 5 in 1
+
+interface 0/1
+
+no shutdown
+
+vlan pvid 301
+
+vlan participation include 301
+
+exit
+
+interface 0/2
+
+no shutdown
+
+vlan pvid 302
+
+vlan participation include 302
+
+exit
+
+interface 0/3
+
+no shutdown
+
+vlan pvid 303
+
+vlan participation include 303,1338
+
+exit
+
+interface 0/4
+
+no shutdown
+
+vlan pvid 304
+
+vlan participation include 304
+
+exit
+
+interface 0/5
+
+no shutdown
+
+vlan pvid 305
+
+vlan participation include 305
+
+exit
+
+interface 0/6
+
+no shutdown
+
+vlan pvid 306
+
+vlan participation include 306
+
+exit
+
+interface 0/7
+
+no shutdown
+
+vlan pvid 307
+
+vlan participation include 307
+
+exit
+
+interface 0/8
+
+no shutdown
+
+vlan pvid 308
+
+vlan participation include 308
+
+exit
+
+interface 0/9
+
+no shutdown
+
+vlan pvid 309
+
+vlan participation include 309
+
+exit
+
+interface 0/10
+
+no shutdown
+
+vlan pvid 310
+
+vlan participation include 310
+
+exit
+
+interface 0/11
+
+no shutdown
+
+vlan pvid 110
+
+vlan participation include 110
+
+exit
+
+interface 0/12
+
+no shutdown
+
+exit
+
+interface 0/13
+
+no shutdown
+
+vlan pvid 100
+
+vlan participation include 100
+
+exit
+
+interface 0/14
+
+no shutdown
+
+vlan pvid 100
+
+vlan participation include 100
+
+exit
+
+interface 0/15
+
+no shutdown
+
+vlan pvid 100
+
+vlan participation include 100
+
+exit
+
+interface 0/16
+
+no shutdown
+
+vlan pvid 100
+
+vlan participation include 100
+
+exit
+
+interface 0/17
+
+no shutdown
+
+vlan pvid 100
+
+vlan participation include 100
+
+exit
+
+interface 0/18
+
+no shutdown
+
+vlan pvid 100
+
+vlan participation include 100
+
+exit
+
+interface 0/19
+
+no shutdown
+
+vlan pvid 100
+
+vlan participation include 100
+
+exit
+
+interface 0/20
+
+no shutdown
+
+vlan pvid 100
+
+vlan participation include 100
+
+exit
+
+interface 0/21
+
+no shutdown
+
+vlan pvid 100
+
+vlan participation include 100
+
+exit
+
+interface 0/22
+
+no shutdown
+
+vlan pvid 100
+
+vlan participation include 100
+
+exit
+
+interface 0/23
+
+no shutdown
+
+vlan pvid 100
+
+vlan participation include 100
+
+exit
+
+interface 0/24
+
+no shutdown
+
+vlan participation include 100,301-311,802,1337
+
+vlan tagging 100,301-311,802,1337
+
+exit
+
+interface 0/25
+
+no shutdown
+
+vlan pvid 802
+
+vlan participation include 802
+
+exit
+
+interface 0/26
+
+no shutdown
+
+vlan pvid 802
+
+vlan participation include 802
+
+exit
+
+interface 0/27
+
+no shutdown
+
+vlan pvid 802
+
+vlan participation include 802
+
+exit
+
+interface 0/28
+
+no shutdown
+
+vlan pvid 802
+
+vlan participation include 802
+
+exit
+
+interface 0/29
+
+no shutdown
+
+vlan pvid 802
+
+vlan participation include 802
+
+exit
+
+interface 0/30
+
+no shutdown
+
+vlan pvid 802
+
+vlan participation include 802
+
+exit
+
+interface 0/31
+
+no shutdown
+
+vlan pvid 802
+
+vlan participation include 802
+
+exit
+
+interface 0/32
+
+no shutdown
+
+vlan pvid 802
+
+vlan participation include 802
+
+exit
+
+interface 0/33
+
+no shutdown
+
+vlan pvid 802
+
+vlan participation include 802
+
+exit
+
+interface 0/34
+
+no shutdown
+
+vlan pvid 802
+
+vlan participation include 802
+
+exit
+
+interface 0/35
+
+no shutdown
+
+vlan pvid 802
+
+vlan participation include 802
+
+exit
+
+interface 0/36
+
+no shutdown
+
+vlan pvid 802
+
+vlan participation include 802
+
+exit
+
+interface 0/37
+
+no shutdown
+
+vlan pvid 1337
+
+vlan participation include 1337
+
+exit
+
+interface 0/38
+
+no shutdown
+
+vlan pvid 1337
+
+vlan participation include 1337
+
+exit
+
+interface 0/39
+
+no shutdown
+
+vlan pvid 1337
+
+vlan participation include 1337
+
+exit
+
+interface 0/40
+
+no shutdown
+
+vlan pvid 1337
+
+vlan participation include 1337
+
+exit
+
+interface 0/41
+
+no shutdown
+
+vlan pvid 1337
+
+vlan participation include 1337
+
+exit
+
+interface 0/42
+
+no shutdown
+
+vlan pvid 1337
+
+vlan participation include 1337
+
+exit
+
+interface 0/43
+
+no shutdown
+
+vlan pvid 1337
+
+vlan participation include 1337
+
+exit
+
+interface 0/44
+
+no shutdown
+
+vlan pvid 1337
+
+vlan participation include 1337
+
+exit
+
+interface 0/45
+
+no shutdown
+
+vlan pvid 1337
+
+vlan participation include 1337
+
+exit
+
+interface 0/46
+
+no shutdown
+
+vlan pvid 1337
+
+vlan participation include 1337
+
+exit
+
+interface 0/47
+
+no shutdown
+
+vlan pvid 311
+
+vlan participation include 311
+
+exit
+
+interface 0/48
+
+no shutdown
+
+vlan pvid 5
+
+vlan participation include 5
+
+exit
+
+interface 0/49
+
+no shutdown
+
+vlan pvid 1338
+
+vlan participation include 5,1338
+
+vlan tagging 5
+
+exit
+
+interface 0/50
+
+exit
+
+interface 4/1
+
+no shutdown
+
+routing
+
+ip address  185.125.170.18  255.255.255.252
+
+exit
+
+interface 4/2
+
+no shutdown
+
+routing
+
+ip address  151.216.10.129  255.255.255.128
+
+exit
+
+interface 4/3
+
+no shutdown
+
+routing
+
+ip address  151.216.13.129  255.255.255.224
+
+exit
+
+interface 4/4
+
+no shutdown
+
+routing
+
+ip address  151.216.12.1  255.255.255.224
+
+exit
+
+interface 4/5
+
+no shutdown
+
+routing
+
+ip address  151.216.12.33  255.255.255.224
+
+exit
+
+interface 4/6
+
+no shutdown
+
+routing
+
+ip address  151.216.12.65  255.255.255.224
+
+exit
+
+interface 4/7
+
+no shutdown
+
+routing
+
+ip address  151.216.12.97  255.255.255.224
+
+exit
+
+interface 4/8
+
+no shutdown
+
+routing
+
+ip address  151.216.12.129  255.255.255.224
+
+exit
+
+interface 4/9
+
+no shutdown
+
+routing
+
+ip address  151.216.12.161  255.255.255.224
+
+exit
+
+interface 4/10
+
+no shutdown
+
+routing
+
+ip address  151.216.12.193  255.255.255.224
+
+exit
+
+interface 4/11
+
+no shutdown
+
+routing
+
+ip address  151.216.12.225  255.255.255.224
+
+exit
+
+interface 4/12
+
+no shutdown
+
+routing
+
+ip address  151.216.13.1  255.255.255.224
+
+exit
+
+interface 4/13
+
+no shutdown
+
+routing
+
+ip address  151.216.13.33  255.255.255.224
+
+exit
+
+interface 4/14
+
+no shutdown
+
+routing
+
+ip address  151.216.8.1  255.255.254.0
+
+exit
+
+interface 4/15
+
+no shutdown
+
+routing
+
+ip address  151.216.10.1  255.255.255.128
+
+exit
+
+interface 4/16
+
+no shutdown
+
+routing
+
+ip address  151.216.13.65  255.255.255.224
+
+exit
+
+router rip
+
+exit
+
+router ospf
+
+exit
+
+!Management ACAL
+
+management access-list "remote-access"
+
+permit ip-source 151.216.8.0 mask 255.255.248.0 priority 10
+
+permit ip-source 79.160.0.0 mask 255.255.0.0 priority 20
+
+permit ip-source 81.166.236.40 mask 255.255.255.255 priority 30
+
+exit
+
+management access-class remote-access
+
+exit
+

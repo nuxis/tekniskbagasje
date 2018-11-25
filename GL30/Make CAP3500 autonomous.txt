@@ -1,0 +1,31 @@
+1) Factory restore 
+Factory restore by holding in the "MODE" button in 30 seconds. It's important that the AP does not get an IP by DHCP at this time. 
+Then you will drop out to a shell in ROMMON where you must delete two files by:
+ap> delete flash://private-multiple-fs flash://env_vars
+ap> boot
+
+After it's booted, you can log in via console with default password "Cisco". 
+
+2) Transfer the autonomous image
+Put the autonomous firmware (ap3g1-k9w7-tar.152-4.JB6) on a TFTP server. 
+
+Now activate the debug-mode so we can configure the AP, by issuing
+# enable
+# debug capwap console cli
+# debug capwap client no-reload 
+
+And give it a static IP, then it only takes half the time...
+# conf t
+# interface BVI 1
+# ip address x.x.x.x n.n.n.n
+# exit
+# ip default-gateway g.g.g.g
+
+Now, transfer the image with TFTP
+# archive download-sw /overwrite tftp://y.y.y.y/ap3g1-k9w7-tar.152-4.JB6.tar 
+
+When it's done, check that it's going to boot the k9w7-image by:
+# more flash://env_vars
+
+If all is good, restart by:
+# reload

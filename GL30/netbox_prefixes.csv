@@ -1,0 +1,18 @@
+prefix,vrf,tenant,site,vlan_group,vlan_vid,status,role,is_pool,description
+151.216.8.0/21,,,GlobeLAN 30,,,Active,,,GL30
+151.216.8.0/23,,,GlobeLAN 30,,,Reserved,,,Wireless
+151.216.10.0/25,,,GlobeLAN 30,,,Active,,,Tech
+151.216.10.128/25,,,GlobeLAN 30,,,Active,,,Crew
+151.216.12.0/27,,,GlobeLAN 30,,,Active,,,Deltakerrad-1
+151.216.12.32/27,,,GlobeLAN 30,,,Active,,,Deltakerrad-2
+151.216.12.64/27,,,GlobeLAN 30,,,Active,,,Deltakerrad-3
+151.216.12.96/27,,,GlobeLAN 30,,,Active,,,Deltakerrad-4
+151.216.12.128/27,,,GlobeLAN 30,,,Active,,,Deltakerrad-5
+151.216.12.160/27,,,GlobeLAN 30,,,Active,,,Deltakerrad-6
+151.216.12.192/27,,,GlobeLAN 30,,,Active,,,Deltakerrad-7
+151.216.12.224/27,,,GlobeLAN 30,,,Active,,,Deltakerrad-8
+151.216.13.0/27,,,GlobeLAN 30,,,Active,,,Deltakerrad-9
+151.216.13.32/27,,,GlobeLAN 30,,,Active,,,Deltakerrad-10
+151.216.13.64/27,,,GlobeLAN 30,,,Active,,,Deltakerrad-11
+151.216.13.96/27,,,GlobeLAN 30,,,Reserved,,,Deltakerrad-12
+151.216.13.128/27,,,GlobeLAN 30,,,Active,,,Kiosk
