@@ -1,0 +1,83 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+include "/etc/bind/rndc.key";
+
+zone "pp27.polarparty.no" {
+	type slave;
+	allow-transfer { 185.181.61.28/32; };
+	masters { 185.181.61.28; };
+	file "db.pp27.polarparty.no";
+	allow-query { any; };
+};
+
+zone "8.216.151.in-addr.arpa" {
+	type slave;
+	allow-transfer { 185.181.61.28/32; };
+	masters { 185.181.61.28; };
+	file "db.8.216.151.in-addr.arpa";
+	allow-query { any; };
+};
+zone "9.216.151.in-addr.arpa" {
+	type slave;
+	allow-transfer { 185.181.61.28/32; };
+	masters { 185.181.61.28; };
+	file "db.9.216.151.in-addr.arpa";
+	allow-query { any; };
+};
+zone "10.216.151.in-addr.arpa" {
+	type slave;
+	allow-transfer { 185.181.61.28/32; };
+	masters { 185.181.61.28; };
+	file "db.10.216.151.in-addr.arpa";
+	allow-query { any; };
+};
+zone "11.216.151.in-addr.arpa" {
+	type slave;
+	allow-transfer { 185.181.61.28/32; };
+	masters { 185.181.61.28; };
+	file "db.11.216.151.in-addr.arpa";
+	allow-query { any; };
+};
+zone "12.216.151.in-addr.arpa" {
+	type slave;
+	allow-transfer { 185.181.61.28/32; };
+	masters { 185.181.61.28; };
+	file "db.12.216.151.in-addr.arpa";
+	allow-query { any; };
+};
+zone "13.216.151.in-addr.arpa" {
+	type slave;
+	allow-transfer { 185.181.61.28/32; };
+	masters { 185.181.61.28; };
+	file "db.13.216.151.in-addr.arpa";
+	allow-query { any; };
+};
+zone "14.216.151.in-addr.arpa" {
+	type slave;
+	allow-transfer { 185.181.61.28/32; };
+	masters { 185.181.61.28; };
+	file "db.14.216.151.in-addr.arpa";
+	allow-query { any; };
+};
+zone "15.216.151.in-addr.arpa" {
+	type slave;
+	allow-transfer { 185.181.61.28/32; };
+	masters { 185.181.61.28; };
+	file "db.15.216.151.in-addr.arpa";
+	allow-query { any; };
+};
+
+
+
+
+
+
+
+
+	
