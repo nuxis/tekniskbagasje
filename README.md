@@ -1,2 +1,2 @@
 # tekniskbagasje
-Configuration files from past PolarParty
+Configuration files from past LANs and parties
