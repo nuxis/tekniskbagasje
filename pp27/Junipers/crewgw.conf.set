@@ -1,0 +1,130 @@
+set version 15.1R6.7
+set system host-name CrewGW
+set system root-authentication encrypted-password "$5$OA3a0iGh$tkWIBd80GxGJNgvU84tVZSgb.NNCR4bNfsl4n/lH8m0"
+set system name-server 151.216.10.3
+set system name-server 185.181.61.28
+set system services ssh root-login allow
+set system services ssh protocol-version v2
+set system syslog host c.pp27.polarparty.no any warning
+set system syslog host c.pp27.polarparty.no interactive-commands any
+set system syslog host c.pp27.polarparty.no allow-duplicates
+set system syslog host c.pp27.polarparty.no facility-override local7
+set system syslog host c.pp27.polarparty.no explicit-priority
+set system archival configuration transfer-on-commit
+set system archival configuration archive-sites "scp://ppconfig@q.pp27.polarparty.no:/home/ppconfig/pp27/configs/" password "$9$RJehlv8X7bs436K8X-sYmfT3/AO1EyeMs2369tOBN-Vb4JHqfn9pn69tOBhcY24Ji.P5z3n9Yg"
+set system ntp server 129.240.2.6
+set chassis aggregated-devices ethernet device-count 10
+set security ssh-known-hosts host q.pp27.polarparty.no,151.216.10.3 ecdsa-sha2-nistp256-key AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBD1Q2kyGfYfWsqZ7yvZ1Zjjs6cm59ZyCU0Nj3SO92tFoGAl3+8nE9kWlgbyBl72C+kIBLcpDOtj9awou1DGYT/k=
+set interfaces interface-range Crew member-range ge-0/0/16 to ge-0/0/39
+set interfaces interface-range Crew description Crew
+set interfaces interface-range Crew unit 0 family ethernet-switching vlan members Crew
+set interfaces interface-range WLAN member-range ge-0/0/0 to ge-0/0/3
+set interfaces interface-range WLAN description WLAN
+set interfaces interface-range WLAN unit 0 family ethernet-switching vlan members WLAN
+set interfaces interface-range Servers member-range ge-0/0/40 to ge-0/0/47
+set interfaces interface-range Servers description Servers
+set interfaces interface-range Servers unit 0 family ethernet-switching vlan members Servers
+set interfaces ge-0/0/4 ether-options 802.3ad ae0
+set interfaces ge-0/0/5 ether-options 802.3ad ae0
+set interfaces ge-0/0/6 ether-options 802.3ad ae1
+set interfaces ge-0/0/7 ether-options 802.3ad ae1
+set interfaces ge-0/0/8 ether-options 802.3ad ae2
+set interfaces ge-0/0/9 ether-options 802.3ad ae2
+set interfaces ge-0/0/10 ether-options 802.3ad ae3
+set interfaces ge-0/0/11 ether-options 802.3ad ae3
+set interfaces ge-0/0/12 ether-options 802.3ad ae4
+set interfaces ge-0/0/13 ether-options 802.3ad ae4
+set interfaces ge-0/0/14 ether-options 802.3ad ae5
+set interfaces ge-0/0/15 ether-options 802.3ad ae5
+set interfaces ge-0/0/22 description "Crewrad Stab"
+set interfaces ge-0/0/22 unit 0 family ethernet-switching vlan members Crew
+set interfaces ge-0/0/23 description "Crewrad Game"
+set interfaces ge-0/0/23 unit 0 family ethernet-switching vlan members Crew
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Servers
+set interfaces xe-0/1/1 unit 0 family ethernet-switching vlan members Servers
+set interfaces xe-0/1/2 unit 0 family ethernet-switching vlan members Servers
+set interfaces xe-0/1/3 unit 0 description "CrewGW -> EastGW"
+set interfaces xe-0/1/3 unit 0 family ethernet-switching port-mode trunk
+set interfaces xe-0/1/3 unit 0 family ethernet-switching vlan members LinkEastGW
+set interfaces xe-0/1/3 unit 0 family ethernet-switching vlan members WLAN
+set interfaces xe-0/1/3 unit 0 family ethernet-switching vlan members Servers
+set interfaces ae0 aggregated-ether-options minimum-links 1
+set interfaces ae0 aggregated-ether-options lacp active
+set interfaces ae0 unit 0 description Crewrad
+set interfaces ae0 unit 0 family ethernet-switching vlan members Crew
+set interfaces ae1 aggregated-ether-options minimum-links 1
+set interfaces ae1 aggregated-ether-options lacp active
+set interfaces ae1 unit 0 description Crewrad
+set interfaces ae1 unit 0 family ethernet-switching vlan members Crew
+set interfaces ae2 aggregated-ether-options minimum-links 1
+set interfaces ae2 aggregated-ether-options lacp active
+set interfaces ae2 unit 0 description Crewrad
+set interfaces ae2 unit 0 family ethernet-switching vlan members Crew
+set interfaces ae3 aggregated-ether-options minimum-links 1
+set interfaces ae3 aggregated-ether-options lacp active
+set interfaces ae3 unit 0 description Crew/stab
+set interfaces ae3 unit 0 family ethernet-switching vlan members Crew
+set interfaces ae4 aggregated-ether-options minimum-links 1
+set interfaces ae4 aggregated-ether-options lacp active
+set interfaces ae4 unit 0 description Crewrad
+set interfaces ae4 unit 0 family ethernet-switching vlan members Crew
+set interfaces ae5 aggregated-ether-options minimum-links 1
+set interfaces ae5 aggregated-ether-options lacp active
+set interfaces ae5 unit 0 description Crewrad
+set interfaces ae5 unit 0 family ethernet-switching vlan members Crew
+set interfaces lo0 unit 0 family inet filter input mgmtfilter
+set interfaces lo0 unit 0 family inet address 151.216.11.58/32
+set interfaces lo0 unit 0 family inet6 address 2a03:94e0:1337::58/128
+set interfaces vlan unit 0 family inet
+set interfaces vlan unit 170 family inet address 151.216.10.129/25
+set interfaces vlan unit 170 family inet6 address 2a03:94e0:1337:f170::/64 eui-64
+set interfaces vlan unit 305 family inet address 151.216.11.18/30
+set interfaces vlan unit 305 family inet6 address 2a03:94e0:1337:f305::1/127
+set snmp location Crew
+set snmp community pp27 authorization read-only
+set forwarding-options dhcp-relay server-group q-boksen 151.216.10.3
+set forwarding-options dhcp-relay active-server-group q-boksen
+set forwarding-options dhcp-relay group all route-suppression access-internal
+set forwarding-options dhcp-relay group all interface vlan.170
+set routing-options router-id 151.216.11.58
+set protocols router-advertisement interface vlan.170 prefix 2a03:94e0:1337:f170::/64
+set protocols ospf export redistribute-direct
+set protocols ospf export redistribute-loop
+set protocols ospf export ospf-default
+set protocols ospf area 0.0.0.100 interface xe-0/1/3.0
+set protocols ospf area 0.0.0.100 interface vlan.305
+set protocols ospf3 export redistribute-direct
+set protocols ospf3 area 0.0.0.0 interface xe-0/1/3.0
+set protocols ospf3 area 0.0.0.0 interface vlan.305
+set protocols igmp-snooping vlan all
+set protocols rstp
+set protocols lldp interface all
+set protocols lldp-med interface all
+set policy-options prefix-list partynett 151.216.8.0/21
+set policy-options policy-statement ospf-default then accept
+set policy-options policy-statement redistribute-direct from protocol direct
+set policy-options policy-statement redistribute-direct then accept
+set policy-options policy-statement redistribute-loop from protocol local
+set policy-options policy-statement redistribute-loop then accept
+set firewall family inet filter mgmtfilter term accept-ssh from source-prefix-list partynett
+set firewall family inet filter mgmtfilter term accept-ssh from protocol tcp
+set firewall family inet filter mgmtfilter term accept-ssh from destination-port ssh
+set firewall family inet filter mgmtfilter term accept-ssh then accept
+set firewall family inet filter mgmtfilter term accept-snmp from source-prefix-list partynett
+set firewall family inet filter mgmtfilter term accept-snmp from protocol udp
+set firewall family inet filter mgmtfilter term accept-snmp from destination-port snmp
+set firewall family inet filter mgmtfilter term deny-ssh from protocol tcp
+set firewall family inet filter mgmtfilter term deny-ssh from destination-port ssh
+set firewall family inet filter mgmtfilter term deny-ssh then discard
+set firewall family inet filter mgmtfilter term deny-snmp from protocol udp
+set firewall family inet filter mgmtfilter term deny-snmp from destination-port 161
+set firewall family inet filter mgmtfilter term deny-snmp then discard
+set firewall family inet filter mgmtfilter term default-accept then accept
+set ethernet-switching-options storm-control interface all multicast
+set vlans Crew vlan-id 170
+set vlans Crew l3-interface vlan.170
+set vlans LinkEastGW vlan-id 305
+set vlans LinkEastGW l3-interface vlan.305
+set vlans Servers vlan-id 1337
+set vlans WLAN vlan-id 400
+set poe interface all

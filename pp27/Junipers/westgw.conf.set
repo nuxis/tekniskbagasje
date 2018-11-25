@@ -1,0 +1,210 @@
+set version 15.1R6.7
+set system host-name WestGW
+set system root-authentication encrypted-password "$5$KFBYHV49$VRYBOOLZdq2YAxHm4wb.5WKCT5ysQi10P7vtIS/JPo9"
+set system name-server 151.216.10.3
+set system name-server 185.181.61.28
+set system services ssh root-login allow
+set system services ssh protocol-version v2
+set system syslog user * any emergency
+set system syslog host c.pp27.polarparty.no any warning
+set system syslog host c.pp27.polarparty.no interactive-commands any
+set system syslog host c.pp27.polarparty.no allow-duplicates
+set system syslog host c.pp27.polarparty.no facility-override local7
+set system syslog host c.pp27.polarparty.no explicit-priority
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system syslog file interactive-commands interactive-commands any
+set system archival configuration transfer-on-commit
+set system archival configuration archive-sites "scp://ppconfig@q.pp27.polarparty.no:/home/ppconfig/pp27/configs/" password "$9$RJehlv8X7bs436K8X-sYmfT3/AO1EyeMs2369tOBN-Vb4JHqfn9pn69tOBhcY24Ji.P5z3n9Yg"
+set system ntp server 129.240.2.6
+set chassis aggregated-devices ethernet device-count 16
+set security ssh-known-hosts host q.pp27.polarparty.no,151.216.10.3 ecdsa-sha2-nistp256-key AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBD1Q2kyGfYfWsqZ7yvZ1Zjjs6cm59ZyCU0Nj3SO92tFoGAl3+8nE9kWlgbyBl72C+kIBLcpDOtj9awou1DGYT/k=
+set interfaces interface-range WLAN member-range ge-0/0/0 to ge-0/0/3
+set interfaces interface-range WLAN description WLAN
+set interfaces interface-range WLAN unit 0 family ethernet-switching vlan members WLAN
+set interfaces ge-0/0/0 unit 0 family ethernet-switching
+set interfaces ge-0/0/1 unit 0 family ethernet-switching
+set interfaces ge-0/0/2 unit 0 family ethernet-switching
+set interfaces ge-0/0/3 unit 0 family ethernet-switching
+set interfaces ge-0/0/4 unit 0 family ethernet-switching
+set interfaces ge-0/0/5 unit 0 family ethernet-switching
+set interfaces ge-0/0/6 unit 0 family ethernet-switching
+set interfaces ge-0/0/7 unit 0 family ethernet-switching
+set interfaces ge-0/0/8 unit 0 family ethernet-switching
+set interfaces ge-0/0/9 unit 0 family ethernet-switching
+set interfaces ge-0/0/10 unit 0 family ethernet-switching
+set interfaces ge-0/0/11 unit 0 family ethernet-switching
+set interfaces ge-0/0/12 ether-options 802.3ad ae14
+set interfaces ge-0/0/13 ether-options 802.3ad ae14
+set interfaces ge-0/0/14 ether-options 802.3ad ae15
+set interfaces ge-0/0/15 ether-options 802.3ad ae15
+set interfaces ge-0/0/16 ether-options 802.3ad ae16
+set interfaces ge-0/0/17 ether-options 802.3ad ae16
+set interfaces ge-0/0/18 ether-options 802.3ad ae17
+set interfaces ge-0/0/19 ether-options 802.3ad ae17
+set interfaces ge-0/0/20 ether-options 802.3ad ae18
+set interfaces ge-0/0/21 ether-options 802.3ad ae18
+set interfaces ge-0/0/22 ether-options 802.3ad ae19
+set interfaces ge-0/0/23 ether-options 802.3ad ae19
+set interfaces ge-0/0/24 ether-options 802.3ad ae20
+set interfaces ge-0/0/25 ether-options 802.3ad ae20
+set interfaces ge-0/0/26 ether-options 802.3ad ae21
+set interfaces ge-0/0/27 ether-options 802.3ad ae21
+set interfaces ge-0/0/28 unit 0 family ethernet-switching
+set interfaces ge-0/0/29 unit 0 family ethernet-switching
+set interfaces ge-0/0/30 unit 0 family ethernet-switching
+set interfaces ge-0/0/31 unit 0 family ethernet-switching
+set interfaces ge-0/0/32 unit 0 family ethernet-switching
+set interfaces ge-0/0/33 unit 0 family ethernet-switching
+set interfaces ge-0/0/34 unit 0 family ethernet-switching
+set interfaces ge-0/0/35 unit 0 family ethernet-switching
+set interfaces ge-0/0/36 unit 0 family ethernet-switching
+set interfaces ge-0/0/37 unit 0 family ethernet-switching
+set interfaces ge-0/0/38 unit 0 family ethernet-switching
+set interfaces ge-0/0/39 unit 0 family ethernet-switching
+set interfaces ge-0/0/40 unit 0 family ethernet-switching
+set interfaces ge-0/0/41 unit 0 family ethernet-switching
+set interfaces ge-0/0/42 unit 0 family ethernet-switching
+set interfaces ge-0/0/43 unit 0 family ethernet-switching
+set interfaces ge-0/0/44 unit 0 family ethernet-switching
+set interfaces ge-0/0/45 unit 0 family ethernet-switching
+set interfaces ge-0/0/46 unit 0 family ethernet-switching
+set interfaces ge-0/0/47 unit 0 family ethernet-switching
+set interfaces ge-0/1/0 unit 0 family ethernet-switching
+set interfaces xe-0/1/0 unit 0 description "WestGW -> SuperDeskGW"
+set interfaces xe-0/1/0 unit 0 family ethernet-switching port-mode trunk
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members LinkSuperDeskGW
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members WLAN
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members InngangKantine
+set interfaces ge-0/1/1 unit 0 family ethernet-switching
+set interfaces xe-0/1/1 description "WestGW -> CenterGW"
+set interfaces xe-0/1/1 unit 0 family inet address 151.216.11.13/30
+set interfaces xe-0/1/1 unit 0 family inet6 address 2a03:94e0:1337:f304::/127
+set interfaces ge-0/1/2 unit 0 family ethernet-switching
+set interfaces xe-0/1/2 unit 0 description "WestGW -> TekniskGW"
+set interfaces xe-0/1/2 unit 0 family ethernet-switching port-mode trunk
+set interfaces xe-0/1/2 unit 0 family ethernet-switching vlan members LinkTekniskGW
+set interfaces xe-0/1/2 unit 0 family ethernet-switching vlan members Servers
+set interfaces xe-0/1/2 unit 0 family ethernet-switching vlan members WLAN
+set interfaces xe-0/1/2 unit 0 family ethernet-switching vlan members InngangKantine
+set interfaces ge-0/1/3 unit 0 family ethernet-switching
+set interfaces xe-0/1/3 unit 0 family ethernet-switching
+set interfaces ae14 aggregated-ether-options minimum-links 1
+set interfaces ae14 aggregated-ether-options lacp active
+set interfaces ae14 unit 0 description Deltakerrad-9
+set interfaces ae14 unit 0 family inet address 151.216.12.129/27
+set interfaces ae14 unit 0 family inet6 address 2a03:94e0:1337:f9::/64 eui-64
+set interfaces ae15 aggregated-ether-options minimum-links 1
+set interfaces ae15 aggregated-ether-options lacp active
+set interfaces ae15 unit 0 description Deltakerrad-10
+set interfaces ae15 unit 0 family inet address 151.216.12.161/27
+set interfaces ae15 unit 0 family inet6 address 2a03:94e0:1337:f10::/64 eui-64
+set interfaces ae16 aggregated-ether-options minimum-links 1
+set interfaces ae16 aggregated-ether-options lacp active
+set interfaces ae16 unit 0 description Deltakerrad-11
+set interfaces ae16 unit 0 family inet address 151.216.12.193/27
+set interfaces ae16 unit 0 family inet6 address 2a03:94e0:1337:f11::/64 eui-64
+set interfaces ae17 aggregated-ether-options minimum-links 1
+set interfaces ae17 aggregated-ether-options lacp active
+set interfaces ae17 unit 0 description Deltakerrad-12
+set interfaces ae17 unit 0 family inet address 151.216.12.225/27
+set interfaces ae17 unit 0 family inet6 address 2a03:94e0:1337:f12::/64 eui-64
+set interfaces ae18 aggregated-ether-options minimum-links 1
+set interfaces ae18 aggregated-ether-options lacp active
+set interfaces ae18 unit 0 description Deltakerrad-13
+set interfaces ae18 unit 0 family inet address 151.216.13.1/27
+set interfaces ae18 unit 0 family inet6 address 2a03:94e0:1337:f13::/64 eui-64
+set interfaces ae19 aggregated-ether-options minimum-links 1
+set interfaces ae19 aggregated-ether-options lacp active
+set interfaces ae19 unit 0 description Deltakerrad-14
+set interfaces ae19 unit 0 family inet address 151.216.13.33/27
+set interfaces ae19 unit 0 family inet6 address 2a03:94e0:1337:f14::/64 eui-64
+set interfaces ae20 aggregated-ether-options minimum-links 1
+set interfaces ae20 aggregated-ether-options lacp active
+set interfaces ae20 unit 0 description Deltakerrad-15
+set interfaces ae20 unit 0 family inet address 151.216.13.65/27
+set interfaces ae20 unit 0 family inet6 address 2a03:94e0:1337:f15::/64 eui-64
+set interfaces ae21 aggregated-ether-options minimum-links 1
+set interfaces ae21 aggregated-ether-options lacp active
+set interfaces ae21 unit 0 description Deltakerrad-16
+set interfaces ae21 unit 0 family inet address 151.216.13.97/27
+set interfaces ae21 unit 0 family inet6 address 2a03:94e0:1337:f16::/64 eui-64
+set interfaces lo0 unit 0 family inet filter input mgmtfilter
+set interfaces lo0 unit 0 family inet address 151.216.11.60/32
+set interfaces lo0 unit 0 family inet6 address 2a03:94e0:1337::60/128
+set interfaces vlan unit 160 description InngangKantine
+set interfaces vlan unit 302 family inet address 151.216.11.6/30
+set interfaces vlan unit 302 family inet6 address 2a03:94e0:1337:f302::1/127
+set interfaces vlan unit 307 family inet address 151.216.11.21/30
+set interfaces vlan unit 307 family inet6 address 2a03:94e0:1337:f307::/127
+set snmp community pp27 authorization read-only
+set forwarding-options dhcp-relay server-group q-boksen 151.216.10.3
+set forwarding-options dhcp-relay active-server-group q-boksen
+set forwarding-options dhcp-relay group all route-suppression access-internal
+set forwarding-options dhcp-relay group all interface ae14.0
+set forwarding-options dhcp-relay group all interface ae15.0
+set forwarding-options dhcp-relay group all interface ae16.0
+set forwarding-options dhcp-relay group all interface ae17.0
+set forwarding-options dhcp-relay group all interface ae18.0
+set forwarding-options dhcp-relay group all interface ae19.0
+set forwarding-options dhcp-relay group all interface ae20.0
+set forwarding-options dhcp-relay group all interface ae21.0
+set routing-options router-id 151.216.11.60
+set protocols router-advertisement interface ae14.0 prefix 2a03:94e0:1337:f9::/64
+set protocols router-advertisement interface ae15.0 prefix 2a03:94e0:1337:f10::/64
+set protocols router-advertisement interface ae16.0 prefix 2a03:94e0:1337:f11::/64
+set protocols router-advertisement interface ae17.0 prefix 2a03:94e0:1337:f12::/64
+set protocols router-advertisement interface ae18.0 prefix 2a03:94e0:1337:f13::/64
+set protocols router-advertisement interface ae19.0 prefix 2a03:94e0:1337:f14::/64
+set protocols router-advertisement interface ae20.0 prefix 2a03:94e0:1337:f15::/64
+set protocols router-advertisement interface ae21.0 prefix 2a03:94e0:1337:f16::/64
+set protocols ospf export ospf-default
+set protocols ospf export redistribute-direct
+set protocols ospf export redistribute-loop
+set protocols ospf area 0.0.0.100 interface xe-0/1/3.0
+set protocols ospf area 0.0.0.100 interface xe-0/1/2.0
+set protocols ospf area 0.0.0.100 interface xe-0/1/1.0
+set protocols ospf area 0.0.0.100 interface xe-0/1/0.0
+set protocols ospf area 0.0.0.100 interface vlan.302
+set protocols ospf area 0.0.0.100 interface vlan.307
+set protocols ospf3 export redistribute-direct
+set protocols ospf3 area 0.0.0.0 interface xe-0/1/3.0
+set protocols ospf3 area 0.0.0.0 interface xe-0/1/2.0
+set protocols ospf3 area 0.0.0.0 interface xe-0/1/1.0
+set protocols ospf3 area 0.0.0.0 interface xe-0/1/0.0
+set protocols ospf3 area 0.0.0.0 interface vlan.302
+set protocols ospf3 area 0.0.0.0 interface vlan.307
+set protocols igmp-snooping vlan all
+set protocols rstp
+set protocols lldp interface all
+set protocols lldp-med interface all
+set policy-options prefix-list partynett 151.216.8.0/21
+set policy-options policy-statement ospf-default then accept
+set policy-options policy-statement redistribute-direct from protocol direct
+set policy-options policy-statement redistribute-direct then accept
+set policy-options policy-statement redistribute-loop from protocol local
+set policy-options policy-statement redistribute-loop then accept
+set firewall family inet filter mgmtfilter term accept-ssh from source-prefix-list partynett
+set firewall family inet filter mgmtfilter term accept-ssh from protocol tcp
+set firewall family inet filter mgmtfilter term accept-ssh from destination-port ssh
+set firewall family inet filter mgmtfilter term accept-ssh then accept
+set firewall family inet filter mgmtfilter term accept-snmp from source-prefix-list partynett
+set firewall family inet filter mgmtfilter term accept-snmp from protocol udp
+set firewall family inet filter mgmtfilter term accept-snmp from destination-port snmp
+set firewall family inet filter mgmtfilter term deny-ssh from protocol tcp
+set firewall family inet filter mgmtfilter term deny-ssh from destination-port ssh
+set firewall family inet filter mgmtfilter term deny-ssh then discard
+set firewall family inet filter mgmtfilter term deny-snmp from protocol udp
+set firewall family inet filter mgmtfilter term deny-snmp from destination-port 161
+set firewall family inet filter mgmtfilter term deny-snmp then discard
+set firewall family inet filter mgmtfilter term default-accept then accept
+set ethernet-switching-options storm-control interface all
+set vlans InngangKantine vlan-id 160
+set vlans InngangKantine l3-interface vlan.160
+set vlans LinkSuperDeskGW vlan-id 307
+set vlans LinkSuperDeskGW l3-interface vlan.307
+set vlans LinkTekniskGW vlan-id 302
+set vlans LinkTekniskGW l3-interface vlan.302
+set vlans Servers vlan-id 1337
+set vlans WLAN vlan-id 400
+set poe interface all
