@@ -1,0 +1,16 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	gl31.globelan.no. tech.globelan.no. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	gl31.globelan.no.
+@	IN	A	151.216.12.190
+
+a	IN	A	151.216.12.190
+csgo	IN	A	81.166.24.5

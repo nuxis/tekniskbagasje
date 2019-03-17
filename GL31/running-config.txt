@@ -1,0 +1,162 @@
+!Current Configuration:
+!System Description "Dell Networking N4032F, 6.3.1.13, Linux 3.7.10-20383c08"
+!System Software Version 6.3.1.13
+!Cut-through mode is configured as disabled
+!
+configure
+vlan 5,101-118,201-204,1338
+exit
+hostname "skrikern"
+slot 2/0 3    ! Dell Networking N4032F
+stack
+member 2 2    ! N4032F
+exit
+ipv6 unicast-routing
+ip routing
+!
+interface loopback 0
+exit
+interface vlan 1
+exit
+interface vlan 5
+ip address 172.16.4.5 255.255.0.0
+exit
+interface vlan 101
+ip address 151.216.12.193 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f101::/64 eui64
+exit
+interface vlan 102
+ip address 151.216.12.225 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f102::/64 eui64
+exit
+interface vlan 103
+ip address 151.216.13.1 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f103::/64 eui64
+exit
+interface vlan 104
+ip address 151.216.13.33 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f104::/64 eui64
+exit
+interface vlan 105
+ip address 151.216.13.65 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f105::/64 eui64
+exit
+interface vlan 106
+ip address 151.216.13.97 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f106::/64 eui64
+exit
+interface vlan 107
+ip address 151.216.13.129 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f107::/64 eui64
+exit
+interface vlan 108
+ip address 151.216.13.161 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f108::/64 eui64
+exit
+interface vlan 109
+ip address 151.216.13.193 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f109::/64 eui64
+exit
+interface vlan 110
+ip address 151.216.13.225 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f110::/64 eui64
+exit
+interface vlan 111
+ip address 151.216.14.1 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f111::/64 eui64
+exit
+interface vlan 112
+ip address 151.216.14.33 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f112::/64 eui64
+exit
+interface vlan 113
+ip address 151.216.14.65 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f113::/64 eui64
+exit
+interface vlan 114
+ip address 151.216.14.97 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f114::/64 eui64
+exit
+interface vlan 115
+ip address 151.216.14.129 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f115::/64 eui64
+exit
+interface vlan 116
+ip address 151.216.14.161 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f116::/64 eui64
+exit
+interface vlan 117
+ip address 151.216.14.193 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f117::/64 eui64
+exit
+interface vlan 118
+ip address 151.216.14.225 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f118::/64 eui64
+exit
+interface vlan 201
+ip address 151.216.8.1 255.255.252.0
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f201::/64 eui64
+exit
+interface vlan 202
+ip address 151.216.12.1 255.255.255.128
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f202::/64 eui64
+exit
+interface vlan 203
+ip address 151.216.12.129 255.255.255.192
+ipv6 address 2a03:94e0:1338:f203::/64 eui64
+exit
+interface vlan 204
+ip address 151.216.15.1 255.255.255.224
+ip helper-address 151.216.12.190
+ipv6 address 2a03:94e0:1338:f204::/64 eui64
+exit
+interface vlan 1338
+ip address 185.125.170.18 255.255.255.252
+ipv6 address 2a03:94e0:1c::1/127
+exit
+ip route 0.0.0.0 0.0.0.0 185.125.170.17
+username "admin" password 0a14ee6a2bfdf1d67d2782e2ad696776 privilege 15 encrypted
+ip ssh server
+application install SupportAssist auto-restart start-on-boot
+!
+interface Te2/0/1
+switchport mode trunk
+switchport trunk native vlan 1338
+exit
+!
+interface Te2/0/2
+switchport mode trunk
+exit
+!
+interface Te2/0/3
+switchport access vlan 201
+exit
+!
+interface Te2/0/4
+switchport mode trunk
+exit
+snmp-server engineid local 800002a203d067e5d3cb94
+snmp-server community "gl31ro" ro ipaddress 151.216.12.190
+ipv6 route ::/0 2a03:94e0:1c::
+enable password 0a14ee6a2bfdf1d67d2782e2ad696776 encrypted
+exit

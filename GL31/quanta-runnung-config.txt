@@ -1,0 +1,660 @@
+!Current Configuration:
+
+!
+
+!System Description "LB4M 48x1G 2x10G, 1.1.0.8, VxWorks 6.6"
+
+!System Software Version "1.1.0.8"
+
+!System Up Time          "0 days 2 hrs 51 mins 41 secs"
+
+!Cut-through mode is configured as disabled
+
+!Additional Packages     FASTPATH QOS
+
+!Current SNTP Synchronized Time: Not Synchronized
+
+!
+
+set prompt "kankeroute"
+
+enable password 208d073631b87d2946c70de82dc8f18a12e9ca8e95c06a6d09f58ddea728f625b72429e3b0267bb5b39240824dbb5fe8872ebba2d2f01c04653bd2c27e7b3b34 encrypted
+
+network protocol none
+
+network parms 151.216.12.170 255.255.255.192 151.216.12.129
+
+vlan database
+
+vlan 5,101-118,201-204
+
+exit
+
+network mgmt_vlan 203
+
+ip ssh server enable
+
+configure
+
+username "admin" password 208d073631b87d2946c70de82dc8f18a12e9ca8e95c06a6d09f58ddea728f625b72429e3b0267bb5b39240824dbb5fe8872ebba2d2f01c04653bd2c27e7b3b34 level 15 encrypted
+
+line console
+
+exit
+
+line telnet
+
+exit
+
+line ssh
+
+exit
+
+snmp-server sysname "kankeroute"
+
+!
+
+interface 0/1
+
+vlan pvid 101
+
+vlan participation include 101
+
+exit
+
+interface 0/2
+
+vlan pvid 102
+
+vlan participation include 102
+
+exit
+
+interface 0/3
+
+vlan pvid 103
+
+vlan participation include 103
+
+exit
+
+interface 0/4
+
+vlan pvid 104
+
+vlan participation include 104
+
+exit
+
+interface 0/5
+
+vlan pvid 105
+
+vlan participation include 105
+
+exit
+
+interface 0/6
+
+vlan pvid 106
+
+vlan participation include 106
+
+exit
+
+interface 0/7
+
+vlan pvid 107
+
+vlan participation include 107
+
+exit
+
+interface 0/8
+
+vlan pvid 108
+
+vlan participation include 108
+
+exit
+
+interface 0/9
+
+vlan pvid 109
+
+vlan participation include 109
+
+exit
+
+interface 0/10
+
+vlan pvid 110
+
+vlan participation include 110
+
+exit
+
+interface 0/11
+
+vlan pvid 111
+
+vlan participation include 111
+
+exit
+
+interface 0/12
+
+vlan pvid 112
+
+vlan participation include 112
+
+exit
+
+interface 0/13
+
+vlan pvid 113
+
+vlan participation include 113
+
+exit
+
+interface 0/14
+
+vlan pvid 114
+
+vlan participation include 114
+
+exit
+
+interface 0/15
+
+vlan pvid 115
+
+vlan participation exclude 116
+
+vlan participation include 115
+
+exit
+
+interface 0/16
+
+vlan pvid 116
+
+vlan participation include 116
+
+exit
+
+interface 0/17
+
+vlan pvid 117
+
+vlan participation include 117
+
+exit
+
+interface 0/18
+
+vlan pvid 118
+
+vlan participation include 118
+
+exit
+
+interface 0/19
+
+vlan pvid 201
+
+vlan participation include 201
+
+exit
+
+interface 0/20
+
+vlan pvid 201
+
+vlan participation include 201
+
+exit
+
+interface 0/21
+
+vlan pvid 201
+
+vlan participation include 201
+
+exit
+
+interface 0/22
+
+vlan pvid 201
+
+vlan participation include 201
+
+exit
+
+interface 0/23
+
+vlan pvid 201
+
+vlan participation include 201
+
+exit
+
+interface 0/24
+
+vlan pvid 201
+
+vlan participation include 201
+
+exit
+
+interface 0/25
+
+vlan pvid 202
+
+vlan participation include 202
+
+exit
+
+interface 0/26
+
+vlan pvid 202
+
+vlan participation include 202
+
+exit
+
+interface 0/27
+
+vlan pvid 202
+
+vlan participation include 202
+
+exit
+
+interface 0/28
+
+vlan pvid 202
+
+vlan participation include 202
+
+exit
+
+interface 0/29
+
+vlan pvid 203
+
+vlan participation include 203
+
+exit
+
+interface 0/30
+
+vlan pvid 203
+
+vlan participation include 203
+
+exit
+
+interface 0/31
+
+vlan pvid 203
+
+vlan participation include 203
+
+exit
+
+interface 0/32
+
+vlan pvid 203
+
+vlan participation include 203
+
+exit
+
+interface 0/33
+
+vlan pvid 204
+
+vlan participation include 204
+
+exit
+
+interface 0/34
+
+exit
+
+interface 0/35
+
+exit
+
+interface 0/36
+
+exit
+
+interface 0/37
+
+exit
+
+interface 0/38
+
+exit
+
+interface 0/39
+
+exit
+
+interface 0/40
+
+exit
+
+interface 0/41
+
+exit
+
+interface 0/42
+
+exit
+
+interface 0/43
+
+exit
+
+interface 0/44
+
+exit
+
+interface 0/45
+
+exit
+
+interface 0/46
+
+exit
+
+interface 0/47
+
+exit
+
+interface 0/48
+
+exit
+
+interface 0/49
+
+vlan participation include 5,101-118,201-204
+
+vlan tagging 5,101-118,201-204
+
+exit
+
+interface 0/50
+
+vlan pvid 203
+
+vlan participation include 203
+
+exit
+
+interface 3/1
+
+exit
+
+interface 3/2
+
+exit
+
+interface 3/3
+
+exit
+
+interface 3/4
+
+exit
+
+interface 3/5
+
+exit
+
+interface 3/6
+
+exit
+
+interface 3/7
+
+exit
+
+interface 3/8
+
+exit
+
+interface 3/9
+
+exit
+
+interface 3/10
+
+exit
+
+interface 3/11
+
+exit
+
+interface 3/12
+
+exit
+
+interface 3/13
+
+exit
+
+interface 3/14
+
+exit
+
+interface 3/15
+
+exit
+
+interface 3/16
+
+exit
+
+interface 3/17
+
+exit
+
+interface 3/18
+
+exit
+
+interface 3/19
+
+exit
+
+interface 3/20
+
+exit
+
+interface 3/21
+
+exit
+
+interface 3/22
+
+exit
+
+interface 3/23
+
+exit
+
+interface 3/24
+
+exit
+
+interface 3/25
+
+exit
+
+interface 3/26
+
+exit
+
+interface 3/27
+
+exit
+
+interface 3/28
+
+exit
+
+interface 3/29
+
+exit
+
+interface 3/30
+
+exit
+
+interface 3/31
+
+exit
+
+interface 3/32
+
+exit
+
+interface 3/33
+
+exit
+
+interface 3/34
+
+exit
+
+interface 3/35
+
+exit
+
+interface 3/36
+
+exit
+
+interface 3/37
+
+exit
+
+interface 3/38
+
+exit
+
+interface 3/39
+
+exit
+
+interface 3/40
+
+exit
+
+interface 3/41
+
+exit
+
+interface 3/42
+
+exit
+
+interface 3/43
+
+exit
+
+interface 3/44
+
+exit
+
+interface 3/45
+
+exit
+
+interface 3/46
+
+exit
+
+interface 3/47
+
+exit
+
+interface 3/48
+
+exit
+
+interface 3/49
+
+exit
+
+interface 3/50
+
+exit
+
+interface 3/51
+
+exit
+
+interface 3/52
+
+exit
+
+interface 3/53
+
+exit
+
+interface 3/54
+
+exit
+
+interface 3/55
+
+exit
+
+interface 3/56
+
+exit
+
+interface 3/57
+
+exit
+
+interface 3/58
+
+exit
+
+interface 3/59
+
+exit
+
+interface 3/60
+
+exit
+
+interface 3/61
+
+exit
+
+interface 3/62
+
+exit
+
+interface 3/63
+
+exit
+
+interface 3/64
+
+exit
+
+interface 10/1
+
+exit
+
+exit
+
