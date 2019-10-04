@@ -1,0 +1,42 @@
+$ORIGIN .
+$TTL 86400	; 1 day
+27.216.151.in-addr.arpa	IN SOA	greed.pp28.polar.party. pp28teknisk.polar.party. (
+				2019092988 ; serial
+				3600       ; refresh (1 hour)
+				1800       ; retry (30 minutes)
+				608400     ; expire (1 week 1 hour)
+				3600       ; minimum (1 hour)
+				)
+			NS	greed.pp28.polar.party.
+			NS	wrath.pp28.polar.party.
+			A	151.216.27.3
+$ORIGIN 27.216.151.in-addr.arpa.
+$TTL 900	; 15 minutes
+203			PTR	aker11.inngang-kantine.pp28.polar.party.
+208			PTR	aker12.geekevents.net.inngang-kantine.pp28.polar.party.
+218			PTR	aker15.geekevents.net.inngang-kantine.pp28.polar.party.
+222			PTR	aker20.geekevents.net.inngang-kantine.pp28.polar.party.
+224			PTR	aker2.geekevents.net.inngang-kantine.pp28.polar.party.
+226			PTR	aker16.geekevents.net.inngang-kantine.pp28.polar.party.
+227			PTR	aker06.inngang-kantine.pp28.polar.party.
+228			PTR	aker19.geekevents.net.inngang-kantine.pp28.polar.party.
+234			PTR	infoskjerm-inngang.inngang-kantine.pp28.polar.party.
+240			PTR	DESKTOP-CMP9MBD.inngang-kantine.pp28.polar.party.
+241			PTR	DESKTOP-AC3ER7I.inngang-kantine.pp28.polar.party.
+242			PTR	DESKTOP-MMLL94T.inngang-kantine.pp28.polar.party.
+244			PTR	aker17.geekevents.net.inngang-kantine.pp28.polar.party.
+247			PTR	DESKTOP-L2V5ARQ.inngang-kantine.pp28.polar.party.
+249			PTR	raspberrypi.inngang-kantine.pp28.polar.party.
+$TTL 1800	; 30 minutes
+254			PTR	che.inngang-kantine.pp28.polar.party.
+$TTL 900	; 15 minutes
+27			PTR	lampe2.pp28.polar.party.
+34			PTR	DESKTOP-4MSCGU4.tech.pp28.polar.party.
+35			PTR	constanse.tech.pp28.polar.party.
+$TTL 1800	; 30 minutes
+36			PTR	ZXP7-311271586.tech.pp28.polar.party.
+$TTL 900	; 15 minutes
+37			PTR	FX.tech.pp28.polar.party.
+38			PTR	DESKTOP-601FM0U.tech.pp28.polar.party.
+50			PTR	lampe1.pp28.polar.party.
+51			PTR	LAPTOP-C85S98LG.tech.pp28.polar.party.

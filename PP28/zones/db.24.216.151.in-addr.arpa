@@ -1,0 +1,83 @@
+$ORIGIN .
+$TTL 86400	; 1 day
+24.216.151.in-addr.arpa	IN SOA	greed.pp28.polar.party. pp27teknisk.polar.party. (
+				2019093644 ; serial
+				3600       ; refresh (1 hour)
+				1800       ; retry (30 minutes)
+				608400     ; expire (1 week 1 hour)
+				3600       ; minimum (1 hour)
+				)
+			NS	greed.pp28.polar.party.
+			NS	wrath.pp28.polar.party.
+			A	151.216.27.3
+$ORIGIN 24.216.151.in-addr.arpa.
+$TTL 900	; 15 minutes
+103			PTR	Glenn.rad4.pp28.polar.party.
+104			PTR	DESKTOP-OKID9CF.rad4.pp28.polar.party.
+106			PTR	Anton.rad4.pp28.polar.party.
+108			PTR	DESKTOP-PAR1TNO.rad4.pp28.polar.party.
+109			PTR	DESKTOP-RS839G4.rad4.pp28.polar.party.
+111			PTR	DESKTOP-6HEQHFV.rad4.pp28.polar.party.
+113			PTR	DESKTOP-8JIEDBT.rad4.pp28.polar.party.
+116			PTR	hasses-zuper.rad4.pp28.polar.party.
+117			PTR	Bigtoy.rad4.pp28.polar.party.
+121			PTR	DESKTOP-A5P5M94.rad4.pp28.polar.party.
+123			PTR	DESKTOP-7RB63RP.rad4.pp28.polar.party.
+$TTL 150	; 2 minutes 30 seconds
+130			PTR	edge.rad5.pp28.polar.party.
+$TTL 900	; 15 minutes
+133			PTR	MSIGAMING.rad5.pp28.polar.party.
+137			PTR	DESKTOP-GBRIH8K.rad5.pp28.polar.party.
+140			PTR	KontorTo.rad5.pp28.polar.party.
+141			PTR	DESKTOP-EE8MOU6.rad5.pp28.polar.party.
+147			PTR	Sebbi-PC.rad5.pp28.polar.party.
+148			PTR	DESKTOP-A4UP3A0.rad5.pp28.polar.party.
+149			PTR	GjermundStasjoner.rad5.pp28.polar.party.
+150			PTR	DESKTOP-EMPL7S4.rad5.pp28.polar.party.
+151			PTR	DESKTOP-A5JGS5L.rad5.pp28.polar.party.
+152			PTR	raspberrypi.rad5.pp28.polar.party.
+153			PTR	DESKTOP-P77J0F0.rad5.pp28.polar.party.
+157			PTR	server.rad5.pp28.polar.party.
+$TTL 150	; 2 minutes 30 seconds
+162			PTR	edge.rad6.pp28.polar.party.
+$TTL 900	; 15 minutes
+170			PTR	Desktop-Niklas.rad6.pp28.polar.party.
+173			PTR	DESKTOP-SIPCIPA.rad6.pp28.polar.party.
+$TTL 150	; 2 minutes 30 seconds
+194			PTR	edge.rad7.pp28.polar.party.
+$TTL 900	; 15 minutes
+199			PTR	DESKTOP-8T09RDN.rad7.pp28.polar.party.
+202			PTR	DESKTOP-QKIQ7CP.rad7.pp28.polar.party.
+203			PTR	DESKTOP-QBB2HHS.rad7.pp28.polar.party.
+205			PTR	DESKTOP-4AH3PCR.rad7.pp28.polar.party.
+207			PTR	DESKTOP-PE5ESD6.rad7.pp28.polar.party.
+208			PTR	DESKTOP-RTGATNN.rad7.pp28.polar.party.
+209			PTR	DESKTOP-SEK8RGE.rad7.pp28.polar.party.
+215			PTR	DESKTOP-96C9TIG.rad7.pp28.polar.party.
+217			PTR	Andreas-PC.rad7.pp28.polar.party.
+218			PTR	DESKTOP-GNC2A2U.rad7.pp28.polar.party.
+$TTL 150	; 2 minutes 30 seconds
+226			PTR	edge.rad8.pp28.polar.party.
+$TTL 900	; 15 minutes
+229			PTR	DESKTOP-V67D3KC.rad8.pp28.polar.party.
+230			PTR	PC-JW.rad8.pp28.polar.party.
+232			PTR	DESKTOP-MAJHRAN.rad8.pp28.polar.party.
+240			PTR	Vanessa-PC.rad8.pp28.polar.party.
+243			PTR	Kjellroar-PC.rad8.pp28.polar.party.
+$TTL 150	; 2 minutes 30 seconds
+66			PTR	edge.rad3.pp28.polar.party.
+$TTL 900	; 15 minutes
+70			PTR	Miko.rad3.pp28.polar.party.
+73			PTR	DESKTOP-552QO4D.rad3.pp28.polar.party.
+74			PTR	DESKTOP-3EGLHHM.rad3.pp28.polar.party.
+75			PTR	DESKTOP-NOGPLIS.rad3.pp28.polar.party.
+76			PTR	DESKTOP-VCQMHFB.rad3.pp28.polar.party.
+77			PTR	DESKTOP-HO7LH85.rad3.pp28.polar.party.
+78			PTR	Chris-PC.rad3.pp28.polar.party.
+80			PTR	ELEVVFK-BEK3VKT.rad3.pp28.polar.party.
+81			PTR	Azgeda.rad3.pp28.polar.party.
+82			PTR	MSI.rad3.pp28.polar.party.
+83			PTR	raspberrypi.rad3.pp28.polar.party.
+84			PTR	DESKTOP-T1HTLBG.rad3.pp28.polar.party.
+$TTL 150	; 2 minutes 30 seconds
+98			PTR	edge.rad4.pp28.polar.party.

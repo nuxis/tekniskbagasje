@@ -1,0 +1,354 @@
+
+### CoreGW ###
+
+set vlans Rad01 vlan-id 101
+set vlans Rad02 vlan-id 102
+set vlans Rad03 vlan-id 103
+set vlans Rad04 vlan-id 104
+set vlans Rad05 vlan-id 105
+set vlans Rad06 vlan-id 106
+set vlans Rad07 vlan-id 107
+set vlans Rad08 vlan-id 108
+set vlans Rad09 vlan-id 109
+set vlans Rad10 vlan-id 110
+set vlans Rad11 vlan-id 111
+set vlans Rad12 vlan-id 112
+set vlans Rad13 vlan-id 113
+set vlans Rad14 vlan-id 114
+set vlans Rad15 vlan-id 115
+set vlans Rad16 vlan-id 116
+set vlans Rad17 vlan-id 117
+set vlans Rad18 vlan-id 118
+
+set vlans Rad01 l3-interface irb.101
+set vlans Rad02 l3-interface irb.102
+set vlans Rad03 l3-interface irb.103
+set vlans Rad04 l3-interface irb.104
+set vlans Rad05 l3-interface irb.105
+set vlans Rad06 l3-interface irb.106
+set vlans Rad07 l3-interface irb.107
+set vlans Rad08 l3-interface irb.108
+set vlans Rad09 l3-interface irb.109
+set vlans Rad10 l3-interface irb.110
+set vlans Rad11 l3-interface irb.111
+set vlans Rad12 l3-interface irb.112
+set vlans Rad13 l3-interface irb.113
+set vlans Rad14 l3-interface irb.114
+set vlans Rad15 l3-interface irb.115
+set vlans Rad16 l3-interface irb.116
+set vlans Rad17 l3-interface irb.117
+set vlans Rad18 l3-interface irb.118
+
+set vlans Komfort1 vlan-id 201
+set vlans Komfort2 vlan-id 202
+set vlans Komfort3 vlan-id 203
+set vlans Komfort4 vlan-id 204
+set vlans Komfort5 vlan-id 205
+set vlans Komfort6 vlan-id 206
+set vlans Komfort7 vlan-id 207
+set vlans Komfort8 vlan-id 208
+
+set vlans Komfort1 l3-interface irb.201
+set vlans Komfort2 l3-interface irb.202
+set vlans Komfort3 l3-interface irb.203
+set vlans Komfort4 l3-interface irb.204
+set vlans Komfort5 l3-interface irb.205
+set vlans Komfort6 l3-interface irb.206
+set vlans Komfort7 l3-interface irb.207
+set vlans Komfort8 l3-interface irb.208
+
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad01
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad02
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad03
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad04
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad05
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad06
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad07
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad08
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad09
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad10
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad11
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad12
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad13
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad14
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad15
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad16
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad17
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Rad18
+
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Komfort1
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Komfort2
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Komfort3
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Komfort4
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Komfort5
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Komfort6
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Komfort7
+set interface xe-0/2/1 unit 0 family ethernet-switching vlan members Komfort8
+
+set forwarding-options dhcp-relay group all interface irb.101
+set forwarding-options dhcp-relay group all interface irb.102
+set forwarding-options dhcp-relay group all interface irb.103
+set forwarding-options dhcp-relay group all interface irb.104
+set forwarding-options dhcp-relay group all interface irb.105
+set forwarding-options dhcp-relay group all interface irb.106
+set forwarding-options dhcp-relay group all interface irb.107
+set forwarding-options dhcp-relay group all interface irb.108
+set forwarding-options dhcp-relay group all interface irb.109
+set forwarding-options dhcp-relay group all interface irb.110
+set forwarding-options dhcp-relay group all interface irb.111
+set forwarding-options dhcp-relay group all interface irb.112
+set forwarding-options dhcp-relay group all interface irb.113
+set forwarding-options dhcp-relay group all interface irb.114
+set forwarding-options dhcp-relay group all interface irb.115
+set forwarding-options dhcp-relay group all interface irb.116
+set forwarding-options dhcp-relay group all interface irb.117
+set forwarding-options dhcp-relay group all interface irb.118
+
+set forwarding-options dhcp-relay group all interface irb.201
+set forwarding-options dhcp-relay group all interface irb.202
+set forwarding-options dhcp-relay group all interface irb.203
+set forwarding-options dhcp-relay group all interface irb.204
+set forwarding-options dhcp-relay group all interface irb.205
+set forwarding-options dhcp-relay group all interface irb.206
+set forwarding-options dhcp-relay group all interface irb.207
+set forwarding-options dhcp-relay group all interface irb.208
+
+set interface irb unit 101 family inet address 151.216.24.1/27
+set interface irb unit 102 family inet address 151.216.24.33/27
+set interface irb unit 103 family inet address 151.216.24.65/27
+set interface irb unit 104 family inet address 151.216.24.97/27
+set interface irb unit 105 family inet address 151.216.24.129/27
+set interface irb unit 106 family inet address 151.216.24.161/27
+set interface irb unit 107 family inet address 151.216.24.193/27
+set interface irb unit 108 family inet address 151.216.24.225/27
+set interface irb unit 109 family inet address 151.216.25.1/27
+set interface irb unit 110 family inet address 151.216.25.33/27
+set interface irb unit 111 family inet address 151.216.25.65/27
+set interface irb unit 112 family inet address 151.216.25.97/27
+set interface irb unit 113 family inet address 151.216.25.129/27
+set interface irb unit 114 family inet address 151.216.25.161/27
+set interface irb unit 115 family inet address 151.216.25.193/27
+set interface irb unit 116 family inet address 151.216.25.225/27
+set interface irb unit 117 family inet address 151.216.26.1/27
+set interface irb unit 118 family inet address 151.216.26.33/27
+
+set interface irb unit 201 family inet address 151.216.26.65/28
+set interface irb unit 202 family inet address 151.216.26.81/28
+set interface irb unit 203 family inet address 151.216.26.97/28
+set interface irb unit 204 family inet address 151.216.26.113/28
+set interface irb unit 205 family inet address 151.216.26.129/28
+set interface irb unit 206 family inet address 151.216.26.145/28
+set interface irb unit 207 family inet address 151.216.26.161/28
+set interface irb unit 208 family inet address 151.216.26.177/28
+
+
+### bRing ###
+
+set vlans Rad01 vlan-id 101
+set vlans Rad01 vlan-prune
+set interfaces ge-3/0/1 ether-options 802.3ad ae6
+set interfaces ge-4/0/1 ether-options 802.3ad ae6
+set interfaces ae6 unit 0 description "Rad01"
+set interfaces ae6 unit 0 family ethernet-switching vlan members rad01
+set interfaces ae6 aggregated-ether-options minimum-links 1
+set interfaces ae6 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad01
+
+set vlans Rad02 vlan-id 102
+set vlans Rad02 vlan-prune
+set interfaces ge-3/0/2 ether-options 802.3ad ae7
+set interfaces ge-4/0/2 ether-options 802.3ad ae7
+set interfaces ae7 unit 0 description "Rad02"
+set interfaces ae7 unit 0 family ethernet-switching vlan members rad02
+set interfaces ae7 aggregated-ether-options minimum-links 1
+set interfaces ae7 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad02
+
+set vlans Rad03 vlan-id 103
+set vlans Rad03 vlan-prune
+set interfaces ge-3/0/3 ether-options 802.3ad ae8
+set interfaces ge-4/0/3 ether-options 802.3ad ae8
+set interfaces ae8 unit 0 description "Rad03"
+set interfaces ae8 unit 0 family ethernet-switching vlan members rad03
+set interfaces ae8 aggregated-ether-options minimum-links 1
+set interfaces ae8 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad03
+
+set vlans Rad04 vlan-id 104
+set vlans Rad04 vlan-prune
+set interfaces ge-3/0/4 ether-options 802.3ad ae9
+set interfaces ge-4/0/4 ether-options 802.3ad ae9
+set interfaces ae9 unit 0 description "Rad04"
+set interfaces ae9 unit 0 family ethernet-switching vlan members rad04
+set interfaces ae9 aggregated-ether-options minimum-links 1
+set interfaces ae9 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad04
+
+set vlans Rad05 vlan-id 105
+set vlans Rad05 vlan-prune
+set interfaces ge-3/0/5 ether-options 802.3ad ae10
+set interfaces ge-4/0/5 ether-options 802.3ad ae10
+set interfaces ae10 unit 0 description "Rad05"
+set interfaces ae10 unit 0 family ethernet-switching vlan members rad05
+set interfaces ae10 aggregated-ether-options minimum-links 1
+set interfaces ae10 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad05
+
+set vlans Rad06 vlan-id 106
+set vlans Rad06 vlan-prune
+set interfaces ge-3/0/6 ether-options 802.3ad ae11
+set interfaces ge-4/0/6 ether-options 802.3ad ae11
+set interfaces ae11 unit 0 description "Rad06"
+set interfaces ae11 unit 0 family ethernet-switching vlan members rad06
+set interfaces ae11 aggregated-ether-options minimum-links 1
+set interfaces ae11 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad06
+
+set vlans Rad07 vlan-id 107
+set vlans Rad07 vlan-prune
+set interfaces ge-3/0/7 ether-options 802.3ad ae12
+set interfaces ge-4/0/7 ether-options 802.3ad ae12
+set interfaces ae12 unit 0 description "Rad07"
+set interfaces ae12 unit 0 family ethernet-switching vlan members rad07
+set interfaces ae12 aggregated-ether-options minimum-links 1
+set interfaces ae12 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad07
+
+set vlans Rad08 vlan-id 108
+set vlans Rad08 vlan-prune
+set interfaces ge-3/0/8 ether-options 802.3ad ae13
+set interfaces ge-4/0/8 ether-options 802.3ad ae13
+set interfaces ae13 unit 0 description "Rad08"
+set interfaces ae13 unit 0 family ethernet-switching vlan members rad08
+set interfaces ae13 aggregated-ether-options minimum-links 1
+set interfaces ae13 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad08
+
+set vlans Rad09 vlan-id 109
+set vlans Rad09 vlan-prune
+set interfaces ge-3/0/9 ether-options 802.3ad ae14
+set interfaces ge-4/0/9 ether-options 802.3ad ae14
+set interfaces ae14 unit 0 description "Rad09"
+set interfaces ae14 unit 0 family ethernet-switching vlan members rad09
+set interfaces ae14 aggregated-ether-options minimum-links 1
+set interfaces ae14 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad09
+
+set vlans Rad10 vlan-id 110
+set vlans Rad10 vlan-prune
+set interfaces ge-3/0/10 ether-options 802.3ad ae15
+set interfaces ge-4/0/10 ether-options 802.3ad ae15
+set interfaces ae15 unit 0 description "Rad10"
+set interfaces ae15 unit 0 family ethernet-switching vlan members rad10
+set interfaces ae15 aggregated-ether-options minimum-links 1
+set interfaces ae15 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad10
+
+set vlans Rad11 vlan-id 111
+set vlans Rad11 vlan-prune
+set interfaces ge-3/0/11 ether-options 802.3ad ae16
+set interfaces ge-4/0/11 ether-options 802.3ad ae16
+set interfaces ae16 unit 0 description "Rad11"
+set interfaces ae16 unit 0 family ethernet-switching vlan members rad11
+set interfaces ae16 aggregated-ether-options minimum-links 1
+set interfaces ae16 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad11
+
+set vlans Rad12 vlan-id 112
+set vlans Rad12 vlan-prune
+set interfaces ge-3/0/12 ether-options 802.3ad ae17
+set interfaces ge-4/0/12 ether-options 802.3ad ae17
+set interfaces ae17 unit 0 description "Rad12"
+set interfaces ae17 unit 0 family ethernet-switching vlan members rad12
+set interfaces ae17 aggregated-ether-options minimum-links 1
+set interfaces ae17 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad12
+
+set vlans Rad13 vlan-id 113
+set vlans Rad13 vlan-prune
+set interfaces ge-3/0/13 ether-options 802.3ad ae18
+set interfaces ge-4/0/13 ether-options 802.3ad ae18
+set interfaces ae18 unit 0 description "Rad13"
+set interfaces ae18 unit 0 family ethernet-switching vlan members rad13
+set interfaces ae18 aggregated-ether-options minimum-links 1
+set interfaces ae18 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad13
+
+set vlans Rad14 vlan-id 114
+set vlans Rad14 vlan-prune
+set interfaces ge-3/0/14 ether-options 802.3ad ae19
+set interfaces ge-4/0/14 ether-options 802.3ad ae19
+set interfaces ae19 unit 0 description "Rad14"
+set interfaces ae19 unit 0 family ethernet-switching vlan members rad14
+set interfaces ae19 aggregated-ether-options minimum-links 1
+set interfaces ae19 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad14
+
+set vlans Rad15 vlan-id 115
+set vlans Rad15 vlan-prune
+set interfaces ge-3/0/15 ether-options 802.3ad ae20
+set interfaces ge-4/0/15 ether-options 802.3ad ae20
+set interfaces ae20 unit 0 description "Rad15"
+set interfaces ae20 unit 0 family ethernet-switching vlan members rad15
+set interfaces ae20 aggregated-ether-options minimum-links 1
+set interfaces ae20 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad15
+
+set vlans Rad16 vlan-id 116
+set vlans Rad16 vlan-prune
+set interfaces ge-3/0/16 ether-options 802.3ad ae21
+set interfaces ge-4/0/16 ether-options 802.3ad ae21
+set interfaces ae21 unit 0 description "Rad16"
+set interfaces ae21 unit 0 family ethernet-switching vlan members rad16
+set interfaces ae21 aggregated-ether-options minimum-links 1
+set interfaces ae21 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad16
+
+set vlans Rad17 vlan-id 117
+set vlans Rad17 vlan-prune
+set interfaces ge-3/0/17 ether-options 802.3ad ae22
+set interfaces ge-4/0/17 ether-options 802.3ad ae22
+set interfaces ae22 unit 0 description "Rad17"
+set interfaces ae22 unit 0 family ethernet-switching vlan members rad17
+set interfaces ae22 aggregated-ether-options minimum-links 1
+set interfaces ae22 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad17
+
+set vlans Rad18 vlan-id 118
+set vlans Rad18 vlan-prune
+set interfaces ge-3/0/18 ether-options 802.3ad ae23
+set interfaces ge-4/0/18 ether-options 802.3ad ae23
+set interfaces ae23 unit 0 description "Rad18"
+set interfaces ae23 unit 0 family ethernet-switching vlan members rad18
+set interfaces ae23 aggregated-ether-options minimum-links 1
+set interfaces ae23 aggregated-ether-options lacp active
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Rad18
+
+set vlans Komfort1 vlan-id 201
+set vlans Komfort2 vlan-id 202
+set vlans Komfort3 vlan-id 203
+set vlans Komfort4 vlan-id 204
+set vlans Komfort5 vlan-id 205
+set vlans Komfort6 vlan-id 206
+set vlans Komfort7 vlan-id 207
+set vlans Komfort8 vlan-id 208
+
+set vlans Komfort1 vlan-prune
+set vlans Komfort2 vlan-prune
+set vlans Komfort3 vlan-prune
+set vlans Komfort4 vlan-prune
+set vlans Komfort5 vlan-prune
+set vlans Komfort6 vlan-prune
+set vlans Komfort7 vlan-prune
+set vlans Komfort8 vlan-prune
+
+set interfaces xe-1/1/0 unit 0 description "East -> Komfort"
+set interfaces xe-1/1/0 unit 0 family ethernet-switching port-mode trunk
+set interfaces xe-1/1/0 unit 0 family ethernet-switching vlan members Komfort1
+set interfaces xe-1/1/0 unit 0 family ethernet-switching vlan members Komfort2
+set interfaces xe-1/1/0 unit 0 family ethernet-switching vlan members Komfort3
+set interfaces xe-1/1/0 unit 0 family ethernet-switching vlan members Komfort4
+set interfaces xe-1/1/0 unit 0 family ethernet-switching vlan members Komfort5
+set interfaces xe-1/1/0 unit 0 family ethernet-switching vlan members Komfort6
+set interfaces xe-1/1/0 unit 0 family ethernet-switching vlan members Komfort7
+set interfaces xe-1/1/0 unit 0 family ethernet-switching vlan members Komfort8

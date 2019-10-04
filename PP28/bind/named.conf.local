@@ -1,0 +1,103 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+include "/etc/bind/rndc.key";
+
+zone "pp28.polarparty.no" {
+	type master;
+	file "db.pp28.polarparty.no";
+	allow-query { any; };
+        notify yes;
+        allow-transfer {185.243.217.50;};
+	allow-update { key "rndc-key"; };
+        also-notify {185.243.217.50;};
+};
+
+zone "pp28.polar.party" {
+	type master;
+	file "db.pp28.polar.party";
+	allow-query { any; };
+        notify yes;
+        allow-transfer {185.243.217.50;};
+	allow-update { key "rndc-key"; };
+        also-notify {185.243.217.50;};
+};
+
+zone "24.216.151.in-addr.arpa" {
+	type master;
+	file "db.24.216.151.in-addr.arpa";
+	allow-query { any; };
+        notify yes;
+        allow-transfer {185.243.217.50;};
+        allow-update { key "rndc-key"; };
+        also-notify {185.243.217.50;};
+};
+zone "25.216.151.in-addr.arpa" {
+	type master;
+	file "db.25.216.151.in-addr.arpa";
+	allow-query { any; };
+        notify yes;
+        allow-transfer {185.243.217.50;};
+        allow-update { key "rndc-key"; };
+        also-notify {185.243.217.50;};
+};
+zone "26.216.151.in-addr.arpa" {
+	type master;
+	file "db.26.216.151.in-addr.arpa";
+	allow-query { any; };
+        notify yes;
+        allow-transfer {185.243.217.50;};
+        allow-update { key "rndc-key"; };
+        also-notify {185.243.217.50;};
+};
+zone "27.216.151.in-addr.arpa" {
+	type master;
+	file "db.27.216.151.in-addr.arpa";
+	allow-query { any; };
+        notify yes;
+        allow-transfer {185.243.217.50;};
+        allow-update { key "rndc-key"; };
+        also-notify {185.243.217.50;};
+};
+zone "28.216.151.in-addr.arpa" {
+	type master;
+	file "db.28.216.151.in-addr.arpa";
+	allow-query { any; };
+        notify yes;
+        allow-transfer {185.243.217.50;};
+        allow-update { key "rndc-key"; };
+        also-notify {185.243.217.50;};
+};
+zone "29.216.151.in-addr.arpa" {
+	type master;
+	file "db.29.216.151.in-addr.arpa";
+	allow-query { any; };
+        notify yes;
+        allow-transfer {185.243.217.50;};
+        allow-update { key "rndc-key"; };
+        also-notify {185.243.217.50;};
+};
+zone "30.216.151.in-addr.arpa" {
+	type master;
+	file "db.30.216.151.in-addr.arpa";
+	allow-query { any; };
+        notify yes;
+        allow-transfer {185.243.217.50;};
+        allow-update { key "rndc-key"; };
+        also-notify {185.243.217.50;};
+};
+zone "31.216.151.in-addr.arpa" {
+	type master;
+	file "db.31.216.151.in-addr.arpa";
+	allow-query { any; };
+        notify yes;
+        allow-transfer {185.243.217.50;};
+        allow-update { key "rndc-key"; };
+        also-notify {185.243.217.50;};
+};
+

@@ -1,0 +1,114 @@
+$ORIGIN .
+$TTL 86400	; 1 day
+25.216.151.in-addr.arpa	IN SOA	greed.pp28.polar.party. pp28teknisk.polar.party. (
+				2019093969 ; serial
+				3600       ; refresh (1 hour)
+				1800       ; retry (30 minutes)
+				608400     ; expire (1 week 1 hour)
+				3600       ; minimum (1 hour)
+				)
+			NS	greed.pp28.polar.party.
+			NS	wrath.pp28.polar.party.
+			A	151.216.27.3
+$ORIGIN 25.216.151.in-addr.arpa.
+$TTL 900	; 15 minutes
+10			PTR	DESKTOP-VLDKNSE.rad9.pp28.polar.party.
+110			PTR	DESKTOP-TKDO8TM.rad12.pp28.polar.party.
+112			PTR	kristoffer.rad12.pp28.polar.party.
+113			PTR	DESKTOP-N9I1IJ4.rad12.pp28.polar.party.
+114			PTR	DESKTOP-CE7DKBV.rad12.pp28.polar.party.
+115			PTR	DESKTOP-5363FJO.rad12.pp28.polar.party.
+116			PTR	n0z-GamingMachine.rad12.pp28.polar.party.
+117			PTR	DESKTOP-1ULA3PQ.rad12.pp28.polar.party.
+118			PTR	4690KTeo-PC.rad12.pp28.polar.party.
+12			PTR	DESKTOP-5CO10CJ.rad9.pp28.polar.party.
+$TTL 150	; 2 minutes 30 seconds
+130			PTR	edge.rad13.pp28.polar.party.
+$TTL 900	; 15 minutes
+133			PTR	Mini.rad13.pp28.polar.party.
+136			PTR	DESKTOP-IN91BDE.rad13.pp28.polar.party.
+137			PTR	DESKTOP-NIAFJFM.rad13.pp28.polar.party.
+138			PTR	PappaSugerPikk.rad13.pp28.polar.party.
+146			PTR	DESKTOP-Q68RH5U.rad13.pp28.polar.party.
+150			PTR	XBOXONE.rad13.pp28.polar.party.
+153			PTR	Thomas-PC.rad13.pp28.polar.party.
+16			PTR	DESKTOP-I8974H7.rad9.pp28.polar.party.
+$TTL 150	; 2 minutes 30 seconds
+162			PTR	edge.rad14.pp28.polar.party.
+$TTL 900	; 15 minutes
+170			PTR	DESKTOP-MKKALGQ.rad14.pp28.polar.party.
+172			PTR	DESKTOP-0VFB5F7.rad14.pp28.polar.party.
+173			PTR	StephanPC.rad14.pp28.polar.party.
+174			PTR	Mikael-PC.rad14.pp28.polar.party.
+177			PTR	DESKTOP-GLSO0F2.rad14.pp28.polar.party.
+178			PTR	DESKTOP-GU2H25L.rad14.pp28.polar.party.
+179			PTR	LAPTOP-1U9M07GP.rad14.pp28.polar.party.
+18			PTR	DESKTOP-A0OOMG9.rad9.pp28.polar.party.
+181			PTR	TrymD-sin-pc.rad14.pp28.polar.party.
+182			PTR	Kristian.rad14.pp28.polar.party.
+186			PTR	DESKTOP-LJI99QG.rad14.pp28.polar.party.
+187			PTR	DESKTOP-9HFRVJM.rad14.pp28.polar.party.
+19			PTR	MiniFroakie.rad9.pp28.polar.party.
+$TTL 150	; 2 minutes 30 seconds
+194			PTR	edge.rad15.pp28.polar.party.
+2			PTR	edge.rad9.pp28.polar.party.
+$TTL 900	; 15 minutes
+204			PTR	Henrik.rad15.pp28.polar.party.
+207			PTR	DESKTOP-VOVCJK4.rad15.pp28.polar.party.
+208			PTR	DESKTOP-3JAJQPV.rad15.pp28.polar.party.
+209			PTR	DESKTOP-ARE7RU3.rad15.pp28.polar.party.
+21			PTR	DESKTOP-VDGGV02.rad9.pp28.polar.party.
+210			PTR	csyc.rad15.pp28.polar.party.
+211			PTR	OskarionPC.rad15.pp28.polar.party.
+212			PTR	DESKTOP-VHVI504.rad15.pp28.polar.party.
+213			PTR	DESKTOP-H3LQOKL.rad15.pp28.polar.party.
+214			PTR	DESKTOP-TP96U9R.rad15.pp28.polar.party.
+22			PTR	n860.rad9.pp28.polar.party.
+$TTL 150	; 2 minutes 30 seconds
+226			PTR	edge.rad16.pp28.polar.party.
+$TTL 900	; 15 minutes
+232			PTR	OMEGAnerd-TOP-notch-saker.rad16.pp28.polar.party.
+237			PTR	Venom.rad16.pp28.polar.party.
+24			PTR	DESKTOP-SCK2MON.rad9.pp28.polar.party.
+247			PTR	DESKTOP-8GT8S5N.rad16.pp28.polar.party.
+248			PTR	DESKTOP-R0C1G4E.rad16.pp28.polar.party.
+249			PTR	DESKTOP-A437MJ8.rad16.pp28.polar.party.
+250			PTR	HKN-PC.rad16.pp28.polar.party.
+26			PTR	DESKTOP-P15RB2S.rad9.pp28.polar.party.
+27			PTR	DESKTOP-36EPEA3.rad9.pp28.polar.party.
+$TTL 150	; 2 minutes 30 seconds
+34			PTR	edge.rad10.pp28.polar.party.
+$TTL 900	; 15 minutes
+39			PTR	DESKTOP-9HQGSIK.rad10.pp28.polar.party.
+41			PTR	DESKTOP-D296AQG.rad10.pp28.polar.party.
+42			PTR	DESKTOP-450SVGV.rad10.pp28.polar.party.
+43			PTR	Destroyer.rad10.pp28.polar.party.
+45			PTR	DESKTOP-GSRECT4.rad10.pp28.polar.party.
+47			PTR	DESKTOP-6K96FTL.rad10.pp28.polar.party.
+51			PTR	DESKTOP-H9JDR09.rad10.pp28.polar.party.
+55			PTR	DESKTOP-1OT0PBI.rad10.pp28.polar.party.
+56			PTR	DESKTOP-RCFEGLQ.rad10.pp28.polar.party.
+57			PTR	DESKTOP-RMSO9SO.rad10.pp28.polar.party.
+6			PTR	DESKTOP-9TTO2C8.rad9.pp28.polar.party.
+$TTL 150	; 2 minutes 30 seconds
+66			PTR	edge.rad11.pp28.polar.party.
+$TTL 900	; 15 minutes
+67			PTR	LAPTOP-KVLKOSJ5.rad11.pp28.polar.party.
+68			PTR	104800SG7X-P.n13.tconet.net.
+69			PTR	Andreas-PC.rad11.pp28.polar.party.
+73			PTR	XBOXONE.rad11.pp28.polar.party.
+74			PTR	DESKTOP-GBMSK0I.rad11.pp28.polar.party.
+75			PTR	NisseFro.rad11.pp28.polar.party.
+76			PTR	DESKTOP-3D612K6.rad11.pp28.polar.party.
+77			PTR	DESKTOP-05QJ910.rad11.pp28.polar.party.
+79			PTR	Phillip.rad11.pp28.polar.party.
+8			PTR	Aleksander.rad9.pp28.polar.party.
+80			PTR	DESKTOP-NNMDMV2.rad11.pp28.polar.party.
+81			PTR	AXEL.rad11.pp28.polar.party.
+84			PTR	DESKTOP-78VPK0O.rad11.pp28.polar.party.
+85			PTR	DESKTOP-70IJU5S.rad11.pp28.polar.party.
+91			PTR	DESKTOP-4ABS7AO.rad11.pp28.polar.party.
+92			PTR	DESKTOP-M69CS1U.rad11.pp28.polar.party.
+93			PTR	MSI.rad11.pp28.polar.party.
+$TTL 150	; 2 minutes 30 seconds
+98			PTR	edge.rad12.pp28.polar.party.

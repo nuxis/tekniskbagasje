@@ -1,0 +1,114 @@
+$ORIGIN .
+$TTL 86400	; 1 day
+28.216.151.in-addr.arpa	IN SOA	greed.pp28.polar.party. pp28teknisk.polar.party. (
+				2019094454 ; serial
+				3600       ; refresh (1 hour)
+				1800       ; retry (30 minutes)
+				608400     ; expire (1 week 1 hour)
+				3600       ; minimum (1 hour)
+				)
+			NS	greed.pp28.polar.party.
+			NS	wrath.pp28.polar.party.
+			A	151.216.27.3
+$ORIGIN 28.216.151.in-addr.arpa.
+$TTL 900	; 15 minutes
+105			PTR	kandupc09.traadfri.pp28.polar.party.
+109			PTR	android-8f0fd8823c85d851.traadfri.pp28.polar.party.
+11			PTR	Wat.traadfri.pp28.polar.party.
+111			PTR	DESKTOP-NDOONLQ.traadfri.pp28.polar.party.
+118			PTR	android-be815b7e82d3d7fd.traadfri.pp28.polar.party.
+122			PTR	Galaxy-S6-edge.traadfri.pp28.polar.party.
+125			PTR	iPad-2.traadfri.pp28.polar.party.
+13			PTR	ap03-crew.traadfri.pp28.polar.party.
+132			PTR	Noahstelsen.traadfri.pp28.polar.party.
+133			PTR	Kim-sin-iPad.traadfri.pp28.polar.party.
+$TTL 1800	; 30 minutes
+135			PTR	iPhone.traadfri.pp28.polar.party.
+$TTL 900	; 15 minutes
+137			PTR	HermansiniPhone.traadfri.pp28.polar.party.
+139			PTR	Samsung-Galaxy-S7.traadfri.pp28.polar.party.
+14			PTR	kandupc02.traadfri.pp28.polar.party.
+143			PTR	DESKTOP-G9F6SDG.traadfri.pp28.polar.party.
+144			PTR	android-d5f4be61e584e46a.traadfri.pp28.polar.party.
+145			PTR	android-3c5de9d7e6499e90.traadfri.pp28.polar.party.
+148			PTR	Huehuehuehuehuehuehuehuehuehuehu.traadfri.pp28.polar.party.
+15			PTR	DESKTOP-M0BFP8R.traadfri.pp28.polar.party.
+165			PTR	Magnuss-iPhone.traadfri.pp28.polar.party.
+168			PTR	android-b89a216d06b7c31a.traadfri.pp28.polar.party.
+17			PTR	Odd-sin-iPhone.traadfri.pp28.polar.party.
+171			PTR	Lokismagicphone.traadfri.pp28.polar.party.
+173			PTR	Helen.traadfri.pp28.polar.party.
+174			PTR	MatheaLiniPhone.traadfri.pp28.polar.party.
+178			PTR	Jeansintelefon.traadfri.pp28.polar.party.
+180			PTR	Galaxy-S10.traadfri.pp28.polar.party.
+186			PTR	NoahMariniPhone.traadfri.pp28.polar.party.
+198			PTR	KentisiniPhone.traadfri.pp28.polar.party.
+199			PTR	Ask-sin-iPhone.traadfri.pp28.polar.party.
+2			PTR	Mg-elite-i-cs.traadfri.pp28.polar.party.
+206			PTR	MarkussiniPhone.traadfri.pp28.polar.party.
+208			PTR	Mi9T-MiPhone.traadfri.pp28.polar.party.
+210			PTR	Galaxy-A50.traadfri.pp28.polar.party.
+216			PTR	JonataniniPhone.traadfri.pp28.polar.party.
+$TTL 1800	; 30 minutes
+219			PTR	HenninginiPhone.traadfri.pp28.polar.party.
+$TTL 900	; 15 minutes
+22			PTR	Kai-sin-iPhone.traadfri.pp28.polar.party.
+220			PTR	AlexandiniPhone.traadfri.pp28.polar.party.
+$TTL 1800	; 30 minutes
+224			PTR	OliversiniPhone.traadfri.pp28.polar.party.
+$TTL 900	; 15 minutes
+225			PTR	LukassiniPhone.traadfri.pp28.polar.party.
+226			PTR	Nexianz.traadfri.pp28.polar.party.
+23			PTR	ap05-conf.traadfri.pp28.polar.party.
+231			PTR	Galaxy-A3-2017.traadfri.pp28.polar.party.
+236			PTR	NicholainiPhone.traadfri.pp28.polar.party.
+238			PTR	KongensiniPhone.traadfri.pp28.polar.party.
+24			PTR	FX.traadfri.pp28.polar.party.
+241			PTR	Viktorsiniphone.traadfri.pp28.polar.party.
+246			PTR	MagnussiniPhone.traadfri.pp28.polar.party.
+251			PTR	ThomassiniPhone.traadfri.pp28.polar.party.
+254			PTR	Magnus-sin-iPad.traadfri.pp28.polar.party.
+255			PTR	Abel.traadfri.pp28.polar.party.
+26			PTR	Galaxy-Note9.traadfri.pp28.polar.party.
+3			PTR	KANDU21-PC.traadfri.pp28.polar.party.
+30			PTR	ap07-super.traadfri.pp28.polar.party.
+31			PTR	ap08-R7-8.traadfri.pp28.polar.party.
+32			PTR	ap09-R11.traadfri.pp28.polar.party.
+33			PTR	KarlFreriksMBP3.traadfri.pp28.polar.party.
+34			PTR	ap14-Kantine.traadfri.pp28.polar.party.
+35			PTR	ap10-R12.traadfri.pp28.polar.party.
+36			PTR	B-30.traadfri.pp28.polar.party.
+37			PTR	IKT00089.par.v-man.no.
+38			PTR	ap11-R13-14.traadfri.pp28.polar.party.
+39			PTR	ap12-sec.traadfri.pp28.polar.party.
+4			PTR	MarielliniPhone.traadfri.pp28.polar.party.
+40			PTR	ap13-Arkade.traadfri.pp28.polar.party.
+42			PTR	slipstream.traadfri.pp28.polar.party.
+43			PTR	Edvins-MBP.traadfri.pp28.polar.party.
+44			PTR	iPhone-a.traadfri.pp28.polar.party.
+45			PTR	BetaPad.traadfri.pp28.polar.party.
+46			PTR	DESKTOP-B37N376.traadfri.pp28.polar.party.
+47			PTR	LAA01-A7796.traadfri.pp28.polar.party.
+48			PTR	Mr-Neslow.traadfri.pp28.polar.party.
+49			PTR	Galaxy-A70.traadfri.pp28.polar.party.
+$TTL 1800	; 30 minutes
+53			PTR	AhmadsiniPhone.traadfri.pp28.polar.party.
+$TTL 900	; 15 minutes
+59			PTR	RonjasiniPhone.traadfri.pp28.polar.party.
+6			PTR	JoakimsiniPhone.traadfri.pp28.polar.party.
+67			PTR	OnePlus7.traadfri.pp28.polar.party.
+7			PTR	Leb-note8.traadfri.pp28.polar.party.
+70			PTR	Shawn-Mathias-Emanuelsen-Tlf.traadfri.pp28.polar.party.
+71			PTR	LAPTOP-KGH26U08.traadfri.pp28.polar.party.
+74			PTR	Max-sin-iphone.traadfri.pp28.polar.party.
+75			PTR	Matss-MBP.traadfri.pp28.polar.party.
+79			PTR	KOVS-BE26039903.traadfri.pp28.polar.party.
+83			PTR	DESKTOP-AQ27MMJ.traadfri.pp28.polar.party.
+86			PTR	Noah-sin-iPhone.traadfri.pp28.polar.party.
+89			PTR	SusanneiniPhone.traadfri.pp28.polar.party.
+92			PTR	android-fd2b0a8ef9266b35.traadfri.pp28.polar.party.
+94			PTR	HeleneMiniPhone.traadfri.pp28.polar.party.
+$TTL 1800	; 30 minutes
+95			PTR	Lucass-iPad.traadfri.pp28.polar.party.
+$TTL 900	; 15 minutes
+99			PTR	Galaxy-S7.traadfri.pp28.polar.party.

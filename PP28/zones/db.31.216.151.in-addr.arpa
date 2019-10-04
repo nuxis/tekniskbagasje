@@ -1,0 +1,12 @@
+$ORIGIN .
+$TTL 86400      ; 1 day
+31.216.151.in-addr.arpa    IN SOA  greed.pp28.polar.party. pp28teknisk.polar.party. (
+                                2019092802 ; serial
+                                3600       ; refresh (1 hour)
+                                1800       ; retry (30 minutes)
+                                608400     ; expire (1 week 1 hour)
+                                3600       ; minimum (1 hour)
+                                )
+                        NS      greed.pp28.polar.party.
+			NS	wrath.pp28.polar.party.
+                        A       151.216.27.3

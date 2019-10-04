@@ -1,0 +1,92 @@
+$ORIGIN .
+$TTL 86400	; 1 day
+26.216.151.in-addr.arpa	IN SOA	greed.pp28.polar.party. pp28teknisk.polar.party. (
+				2019093726 ; serial
+				3600       ; refresh (1 hour)
+				1800       ; retry (30 minutes)
+				608400     ; expire (1 week 1 hour)
+				3600       ; minimum (1 hour)
+				)
+			NS	greed.pp28.polar.party.
+			NS	wrath.pp28.polar.party.
+			A	151.216.27.3
+$ORIGIN 26.216.151.in-addr.arpa.
+$TTL 900	; 15 minutes
+10			PTR	DESKTOP-KB5HQ4H.rad17.pp28.polar.party.
+100			PTR	DESKTOP-K7LIO2F.komfortrad3.pp28.polar.party.
+101			PTR	DESKTOP-2LD9LNG.komfortrad3.pp28.polar.party.
+103			PTR	DESKTOP-LBRH8P6.komfortrad3.pp28.polar.party.
+104			PTR	DESKTOP-P7R6NOU.komfortrad3.pp28.polar.party.
+105			PTR	DESKTOP-2MM4C4B.komfortrad3.pp28.polar.party.
+106			PTR	HJEMME-Benjam2.komfortrad3.pp28.polar.party.
+11			PTR	DESKTOP-30HT136.rad17.pp28.polar.party.
+118			PTR	DESKTOP-RL3JGO1.komfortrad4.pp28.polar.party.
+119			PTR	DESKTOP-MFPCCT2.komfortrad4.pp28.polar.party.
+12			PTR	DESKTOP-FJF3U9F.rad17.pp28.polar.party.
+120			PTR	DESKTOP-771LC6P.komfortrad4.pp28.polar.party.
+121			PTR	DESKTOP-IBA4VS7.komfortrad4.pp28.polar.party.
+13			PTR	DESKTOP-2OU8T62.rad17.pp28.polar.party.
+131			PTR	andypandy.komfortrad5.pp28.polar.party.
+136			PTR	DESKTOP-G2DE9T8.komfortrad5.pp28.polar.party.
+137			PTR	DESKTOP-T1C1RM1.komfortrad5.pp28.polar.party.
+149			PTR	DESKTOP-T08IT7I.komfortrad6.pp28.polar.party.
+15			PTR	DESKTOP-1HSGUN1.rad17.pp28.polar.party.
+150			PTR	DESKTOP-KM46JMT.komfortrad6.pp28.polar.party.
+151			PTR	DESKTOP-FLJJDT2.komfortrad6.pp28.polar.party.
+152			PTR	KARSTEN.komfortrad6.pp28.polar.party.
+16			PTR	DESKTOP-AT2QP9M.rad17.pp28.polar.party.
+163			PTR	Kurayami-no-Kami.komfortrad7.pp28.polar.party.
+164			PTR	DESKTOP-BMIH0TA.komfortrad7.pp28.polar.party.
+165			PTR	DESKTOP-DS8V9SK.komfortrad7.pp28.polar.party.
+166			PTR	Knut-Markus.komfortrad7.pp28.polar.party.
+168			PTR	DESKTOP-QD4U4J6.komfortrad7.pp28.polar.party.
+169			PTR	DESKTOP-JQTR93L.komfortrad7.pp28.polar.party.
+180			PTR	DESKTOP-BN3M57E.komfortrad8.pp28.polar.party.
+181			PTR	LAPTOP-S0CKL7OQ.komfortrad8.pp28.polar.party.
+182			PTR	DESKTOP-BK8FQLT.komfortrad8.pp28.polar.party.
+183			PTR	DESKTOP-3VU9655.komfortrad8.pp28.polar.party.
+184			PTR	DESKTOP-85IR5RJ.komfortrad8.pp28.polar.party.
+185			PTR	DESKTOP-3CO3K4G.komfortrad8.pp28.polar.party.
+186			PTR	DESKTOP-OJVP85M.komfortrad8.pp28.polar.party.
+19			PTR	OWONOTICESBULDGEUWU.rad17.pp28.polar.party.
+$TTL 150	; 2 minutes 30 seconds
+2			PTR	edge.rad17.pp28.polar.party.
+$TTL 900	; 15 minutes
+20			PTR	DESKTOP-CVL79IO.rad17.pp28.polar.party.
+21			PTR	DESKTOP-VSUPU4L.rad17.pp28.polar.party.
+226			PTR	VidiU-Pro-06056.scenemedia.pp28.polar.party.
+23			PTR	ttjoc.rad17.pp28.polar.party.
+230			PTR	DESKTOP-PI5F3OG.scenemedia.pp28.polar.party.
+24			PTR	DESKTOP-8DT8LLK.rad17.pp28.polar.party.
+241			PTR	inforskjerm-lerret2.scenemedia.pp28.polar.party.
+242			PTR	RIGG-A-GFX.scenemedia.pp28.polar.party.
+243			PTR	infoskjerm-desk.scenemedia.pp28.polar.party.
+244			PTR	DESKTOP-UDT5SSL.scenemedia.pp28.polar.party.
+245			PTR	KANDU1.scenemedia.pp28.polar.party.
+248			PTR	DESKTOP-GD4LLTK.scenemedia.pp28.polar.party.
+25			PTR	Zotac.rad17.pp28.polar.party.
+250			PTR	DESKTOP-3HHOVEN.scenemedia.pp28.polar.party.
+27			PTR	PC-Amazing-LIT.rad17.pp28.polar.party.
+28			PTR	joakim-nixos.rad17.pp28.polar.party.
+29			PTR	nixos.rad17.pp28.polar.party.
+3			PTR	DESKTOP-HDM0KQ5.rad17.pp28.polar.party.
+$TTL 150	; 2 minutes 30 seconds
+34			PTR	edge.rad18.pp28.polar.party.
+$TTL 900	; 15 minutes
+38			PTR	DESKTOP-RQV78VE.rad18.pp28.polar.party.
+40			PTR	Exaryus.rad18.pp28.polar.party.
+43			PTR	DESKTOP-S5UDIV6.rad18.pp28.polar.party.
+51			PTR	BLACKPEARL.rad18.pp28.polar.party.
+66			PTR	DESKTOP-NPD9ATM.komfortrad1.pp28.polar.party.
+67			PTR	DESKTOP-SLFII2M.komfortrad1.pp28.polar.party.
+70			PTR	Tobias-Desktop.komfortrad1.pp28.polar.party.
+72			PTR	Aleksander-Gamer.komfortrad1.pp28.polar.party.
+75			PTR	DESKTOP-RAS7HFO.komfortrad1.pp28.polar.party.
+82			PTR	DESKTOP-2NOPIFF.komfortrad2.pp28.polar.party.
+83			PTR	DESKTOP-TEOCS3L.komfortrad2.pp28.polar.party.
+84			PTR	DESKTOP-R9ELANB.komfortrad2.pp28.polar.party.
+86			PTR	DESKTOP-2TVO1TG.komfortrad2.pp28.polar.party.
+87			PTR	DESKTOP-AT0HUKN.komfortrad2.pp28.polar.party.
+88			PTR	DESKTOP-81344FP.komfortrad2.pp28.polar.party.
+9			PTR	DESKTOP-60L5G8J.rad17.pp28.polar.party.
+99			PTR	Endres.komfortrad3.pp28.polar.party.

@@ -1,0 +1,48 @@
+$ORIGIN .
+$TTL 86400	; 1 day
+30.216.151.in-addr.arpa	IN SOA	greed.pp28.polar.party. pp28teknisk.polar.party. (
+				2019093152 ; serial
+				3600       ; refresh (1 hour)
+				1800       ; retry (30 minutes)
+				608400     ; expire (1 week 1 hour)
+				3600       ; minimum (1 hour)
+				)
+			NS	greed.pp28.polar.party.
+			NS	wrath.pp28.polar.party.
+			A	151.216.27.3
+$ORIGIN 30.216.151.in-addr.arpa.
+$TTL 900	; 15 minutes
+10			PTR	DESKTOP-VR4NQFB.crew.pp28.polar.party.
+13			PTR	DESKTOP-EH3N01Q.crew.pp28.polar.party.
+14			PTR	DESKTOP-D4DMGIR.crew.pp28.polar.party.
+16			PTR	DESKTOP-7EB0VVL.crew.pp28.polar.party.
+17			PTR	DESKTOP-S4U4BP9.crew.pp28.polar.party.
+23			PTR	DESKTOP-0R9FT3U.crew.pp28.polar.party.
+24			PTR	DESKTOP-171F4N7.crew.pp28.polar.party.
+25			PTR	MrSilver.crew.pp28.polar.party.
+26			PTR	DESKTOP-BG6EIR3.crew.pp28.polar.party.
+27			PTR	infoskjerm-crew.crew.pp28.polar.party.
+28			PTR	Marius-Laptop.crew.pp28.polar.party.
+31			PTR	Inara.crew.pp28.polar.party.
+37			PTR	DESKTOP-R8BOD3F.crew.pp28.polar.party.
+40			PTR	DESKTOP-B54MNDC.crew.pp28.polar.party.
+44			PTR	dfind.crew.pp28.polar.party.
+45			PTR	Prometheus.crew.pp28.polar.party.
+46			PTR	DESKTOP-HEFVU1F.crew.pp28.polar.party.
+48			PTR	DESKTOP-A50O6HU.crew.pp28.polar.party.
+49			PTR	DESKTOP-77DECD6.crew.pp28.polar.party.
+52			PTR	edvin-komp.crew.pp28.polar.party.
+59			PTR	DESKTOP-RQL5MB1.crew.pp28.polar.party.
+62			PTR	smurfemaskin-PC.crew.pp28.polar.party.
+64			PTR	HultbergNAS.crew.pp28.polar.party.
+67			PTR	DESKTOP-N64T4FE.crew.pp28.polar.party.
+68			PTR	pihole.crew.pp28.polar.party.
+71			PTR	DESKTOP-800S02T.crew.pp28.polar.party.
+74			PTR	DESKTOP-726D7C2.crew.pp28.polar.party.
+8			PTR	DESKTOP-AEH0G6J.crew.pp28.polar.party.
+81			PTR	DESKTOP-4DLH1HN.crew.pp28.polar.party.
+85			PTR	DESKTOP-CRDHU3R.crew.pp28.polar.party.
+86			PTR	DESKTOP-AQES7IG.crew.pp28.polar.party.
+87			PTR	Andreas-Game.crew.pp28.polar.party.
+89			PTR	kermit.crew.pp28.polar.party.
+9			PTR	slipstream.crew.pp28.polar.party.
