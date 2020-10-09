@@ -1,0 +1,27 @@
+$ORIGIN .
+$TTL 300        ; 5 minutes
+pp285.polar.party       IN SOA  greed.pp285.polar.party. pp285teknisk.polar.party. (
+                                2020105256 ; serial
+                                3600       ; refresh (1 hour)
+                                1800       ; retry (30 minutes)
+                                608400     ; expire (1 week 1 hour)
+                                3600       ; minimum (1 hour)
+                                )
+                        NS      ns.eth0.no.
+                        NS      greed.pp285.polar.party.
+                        A       151.216.6.4
+$ORIGIN pp285.polar.party.
+badger                  A       151.216.6.7
+coregw                  A       151.216.6.1
+cs                      A       185.181.62.136
+fohsw                   A       151.216.6.12
+gluttony                A       151.216.6.3
+greed                   A       151.216.6.4
+hyperloop               A       151.216.6.14
+librenms                CNAME   pride
+lust                    A       151.216.6.2
+mc                      A       185.181.62.136
+nattinghill             A       151.216.6.6
+opprop                  A       185.243.216.11
+pride                   A       151.216.6.5
+scenesw                 A       151.216.6.11
