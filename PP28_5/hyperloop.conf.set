@@ -1,0 +1,285 @@
+set version 15.1R7-S4
+set system host-name Hyperloop
+set system auto-snapshot
+set system root-authentication encrypted-password ***
+set system name-server 151.216.6.4
+set system name-server 1.1.1.1
+set system login user mathias full-name Beta
+set system login user mathias uid 2003
+set system login user mathias class super-user
+set system login user mathias authentication encrypted-password ***
+set system login user tech full-name PP28.5tech
+set system login user tech uid 2005
+set system login user tech class super-user
+set system login user tech authentication encrypted-password ***
+set system services ssh root-login deny
+set system services ssh protocol-version v2
+set system syslog host pride.pp285.polar.party any notice
+set system syslog host pride.pp285.polar.party port 514
+set system archival configuration transfer-on-commit
+set system archival configuration archive-sites "scp://tech@greed.pp285.polar.party:/home/tech/configs/" password ***
+set security ssh-known-hosts host greed.pp285.polar.party,151.216.6.4 ecdsa-sha2-nistp256-key AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHmyXPJ6QIn3C4zaR7zM98mNJqmu2SaX9J1QS6lH21HvJTkA8DfqJGlWfANSUfkZjhHFPUxOrh2SqTsK6c5RXmM=
+set interfaces interface-range WIFI member-range ge-0/0/44 to ge-0/0/47
+set interfaces interface-range WIFI member-range ge-1/0/44 to ge-1/0/47
+set interfaces interface-range WIFI member-range ge-2/0/44 to ge-2/0/47
+set interfaces interface-range WIFI member-range ge-3/0/44 to ge-3/0/47
+set interfaces interface-range WIFI member-range ge-4/0/44 to ge-4/0/47
+set interfaces interface-range WIFI description WIFI
+set interfaces interface-range WIFI unit 0 family ethernet-switching vlan members WIFI
+set interfaces interface-range CrewTech member-range ge-1/0/24 to ge-1/0/30
+set interfaces interface-range CrewTech unit 0 family ethernet-switching vlan members Tech
+set interfaces interface-range Crew member-range ge-1/0/0 to ge-1/0/23
+set interfaces interface-range Crew unit 0 family ethernet-switching vlan members Crew
+set interfaces interface-range SHUT member-range ge-2/0/7 to ge-2/0/43
+set interfaces interface-range SHUT member-range ge-3/0/9 to ge-3/0/43
+set interfaces interface-range SHUT member-range ge-4/0/9 to ge-4/0/23
+set interfaces interface-range SHUT member-range ge-4/0/25 to ge-4/0/43
+set interfaces interface-range SHUT disable
+set interfaces ge-0/0/0 description "Hyperloop -> SceneSW"
+set interfaces ge-0/0/0 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/0 unit 0 family ethernet-switching vlan members Tech
+set interfaces ge-0/0/0 unit 0 family ethernet-switching vlan members SceneMedia
+set interfaces ge-0/0/0 unit 0 family ethernet-switching vlan members MediaIntern
+set interfaces ge-0/0/1 description "Hyperloop -> FohSW"
+set interfaces ge-0/0/1 unit 0 family ethernet-switching port-mode trunk
+set interfaces ge-0/0/1 unit 0 family ethernet-switching vlan members Tech
+set interfaces ge-0/0/1 unit 0 family ethernet-switching vlan members SceneMedia
+set interfaces ge-0/0/1 unit 0 family ethernet-switching vlan members MediaIntern
+set interfaces ge-0/0/2 unit 0 family ethernet-switching
+set interfaces ge-0/0/3 unit 0 family ethernet-switching
+set interfaces ge-0/0/4 unit 0 family ethernet-switching
+set interfaces ge-0/0/5 unit 0 family ethernet-switching
+set interfaces ge-0/0/6 unit 0 family ethernet-switching
+set interfaces ge-0/0/7 unit 0 family ethernet-switching
+set interfaces ge-0/0/8 unit 0 family ethernet-switching
+set interfaces ge-0/0/9 unit 0 family ethernet-switching
+set interfaces ge-0/0/10 unit 0 family ethernet-switching
+set interfaces ge-0/0/11 unit 0 family ethernet-switching
+set interfaces ge-0/0/12 unit 0 family ethernet-switching
+set interfaces ge-0/0/13 unit 0 family ethernet-switching
+set interfaces ge-0/0/14 unit 0 family ethernet-switching
+set interfaces ge-0/0/15 unit 0 family ethernet-switching
+set interfaces ge-0/0/16 unit 0 family ethernet-switching
+set interfaces ge-0/0/17 unit 0 family ethernet-switching
+set interfaces ge-0/0/18 unit 0 family ethernet-switching
+set interfaces ge-0/0/19 unit 0 family ethernet-switching
+set interfaces ge-0/0/20 unit 0 family ethernet-switching
+set interfaces ge-0/0/21 unit 0 family ethernet-switching
+set interfaces ge-0/0/22 unit 0 family ethernet-switching
+set interfaces ge-0/0/23 unit 0 family ethernet-switching
+set interfaces ge-0/0/24 unit 0 family ethernet-switching
+set interfaces ge-0/0/25 unit 0 family ethernet-switching
+set interfaces ge-0/0/26 unit 0 family ethernet-switching
+set interfaces ge-0/0/27 unit 0 family ethernet-switching
+set interfaces ge-0/0/28 unit 0 family ethernet-switching
+set interfaces ge-0/0/29 unit 0 family ethernet-switching
+set interfaces ge-0/0/30 unit 0 family ethernet-switching
+set interfaces ge-0/0/31 unit 0 family ethernet-switching
+set interfaces ge-0/0/32 unit 0 family ethernet-switching
+set interfaces ge-0/0/33 unit 0 family ethernet-switching
+set interfaces ge-0/0/34 unit 0 family ethernet-switching
+set interfaces ge-0/0/35 unit 0 family ethernet-switching
+set interfaces ge-0/0/36 unit 0 family ethernet-switching
+set interfaces ge-0/0/37 unit 0 family ethernet-switching
+set interfaces ge-0/0/38 unit 0 family ethernet-switching
+set interfaces ge-0/0/39 unit 0 family ethernet-switching
+set interfaces ge-0/0/40 unit 0 family ethernet-switching
+set interfaces ge-0/0/41 unit 0 family ethernet-switching
+set interfaces ge-0/0/42 unit 0 family ethernet-switching
+set interfaces ge-0/0/43 unit 0 family ethernet-switching
+set interfaces ge-0/0/44 unit 0 family ethernet-switching
+set interfaces ge-0/0/45 unit 0 family ethernet-switching
+set interfaces ge-0/0/46 unit 0 family ethernet-switching
+set interfaces ge-0/0/47 unit 0 family ethernet-switching
+set interfaces ge-0/1/0 unit 0 family ethernet-switching
+set interfaces xe-0/1/0 description "CoreGW -> Hyperloop"
+set interfaces xe-0/1/0 unit 0 family ethernet-switching port-mode trunk
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Tech
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members WIFI
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members Crew
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members InngangKantine
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad1-1
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad1-2
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad1-3
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad11-1
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad11-2
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad11-3
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad13-1
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad13-2
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad13-3
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad15-1
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad15-2
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad17-1
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad17-2
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad3-1
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad3-2
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad3-3
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad5-1
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad5-2
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad5-3
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad7-1
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad7-2
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad7-3
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad9-1
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad9-2
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members rad9-3
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members SceneMedia
+set interfaces xe-0/1/0 unit 0 family ethernet-switching vlan members MediaIntern
+set interfaces ge-0/1/1 unit 0 family ethernet-switching
+set interfaces xe-0/1/1 unit 0 family ethernet-switching
+set interfaces ge-0/1/2 unit 0 family ethernet-switching
+set interfaces xe-0/1/2 unit 0 family ethernet-switching
+set interfaces ge-0/1/3 unit 0 family ethernet-switching
+set interfaces xe-0/1/3 unit 0 family ethernet-switching
+set interfaces xe-1/0/0 unit 0
+set interfaces ge-1/0/31 description MediaIntern
+set interfaces ge-1/0/31 unit 0 family ethernet-switching vlan members MediaIntern
+set interfaces ge-1/0/32 description MediaIntern
+set interfaces ge-1/0/32 unit 0 family ethernet-switching vlan members MediaIntern
+set interfaces ge-1/0/34 unit 0 family ethernet-switching vlan members InngangKantine
+set interfaces ge-1/0/35 unit 0 family ethernet-switching vlan members InngangKantine
+set interfaces xe-1/1/0 unit 0 family ethernet-switching vlan members Tech
+set interfaces ge-2/0/0 description rad1-3
+set interfaces ge-2/0/0 unit 0 family ethernet-switching vlan members rad1-3
+set interfaces ge-2/0/1 description rad3-3
+set interfaces ge-2/0/1 unit 0 family ethernet-switching vlan members rad3-3
+set interfaces ge-2/0/2 description rad5-3
+set interfaces ge-2/0/2 unit 0 family ethernet-switching vlan members rad5-3
+set interfaces ge-2/0/3 description rad7-3
+set interfaces ge-2/0/3 unit 0 family ethernet-switching vlan members rad7-3
+set interfaces ge-2/0/4 description rad9-3
+set interfaces ge-2/0/4 unit 0 family ethernet-switching vlan members rad9-3
+set interfaces ge-2/0/5 description rad11-3
+set interfaces ge-2/0/5 unit 0 family ethernet-switching vlan members rad11-3
+set interfaces ge-2/0/6 description rad13-3
+set interfaces ge-2/0/6 unit 0 family ethernet-switching vlan members rad13-3
+set interfaces ge-3/0/0 description rad1-2
+set interfaces ge-3/0/0 unit 0 family ethernet-switching vlan members rad1-2
+set interfaces ge-3/0/1 description rad3-2
+set interfaces ge-3/0/1 unit 0 family ethernet-switching vlan members rad3-2
+set interfaces ge-3/0/2 description rad5-2
+set interfaces ge-3/0/2 unit 0 family ethernet-switching vlan members rad5-2
+set interfaces ge-3/0/3 description rad7-2
+set interfaces ge-3/0/3 unit 0 family ethernet-switching vlan members rad7-2
+set interfaces ge-3/0/4 description rad9-2
+set interfaces ge-3/0/4 unit 0 family ethernet-switching vlan members rad9-2
+set interfaces ge-3/0/5 description rad11-2
+set interfaces ge-3/0/5 unit 0 family ethernet-switching vlan members rad11-2
+set interfaces ge-3/0/6 description rad13-2
+set interfaces ge-3/0/6 unit 0 family ethernet-switching vlan members rad13-2
+set interfaces ge-3/0/7 description rad15-2
+set interfaces ge-3/0/7 unit 0 family ethernet-switching vlan members rad15-2
+set interfaces ge-3/0/8 description rad17-2
+set interfaces ge-3/0/8 unit 0 family ethernet-switching vlan members rad17-2
+set interfaces ge-4/0/0 description rad1-1
+set interfaces ge-4/0/0 unit 0 family ethernet-switching vlan members rad1-1
+set interfaces ge-4/0/1 description rad3-1
+set interfaces ge-4/0/1 unit 0 family ethernet-switching vlan members rad3-1
+set interfaces ge-4/0/2 description rad5-1
+set interfaces ge-4/0/2 unit 0 family ethernet-switching vlan members rad5-1
+set interfaces ge-4/0/3 description rad7-1
+set interfaces ge-4/0/3 unit 0 family ethernet-switching vlan members rad7-1
+set interfaces ge-4/0/4 description rad9-1
+set interfaces ge-4/0/4 unit 0 family ethernet-switching vlan members rad9-1
+set interfaces ge-4/0/5 description rad11-1
+set interfaces ge-4/0/5 unit 0 family ethernet-switching vlan members rad11-1
+set interfaces ge-4/0/6 description rad13-1
+set interfaces ge-4/0/6 unit 0 family ethernet-switching vlan members rad13-1
+set interfaces ge-4/0/7 description rad15-1
+set interfaces ge-4/0/7 unit 0 family ethernet-switching vlan members rad15-1
+set interfaces ge-4/0/8 description rad17-1
+set interfaces ge-4/0/8 unit 0 family ethernet-switching vlan members rad17-1
+set interfaces ge-4/0/24 unit 0 family ethernet-switching vlan members InngangKantine
+set interfaces lo0 unit 0 family inet filter input mgmtfilter
+set interfaces lo0 unit 0 family inet6 filter input mgmt6filter
+set interfaces vlan unit 0 family inet
+set interfaces vlan unit 1337 family inet address 151.216.6.14/27
+set interfaces vme unit 0 family inet
+set snmp location "Slagenhallen, Norway"
+set snmp community ppsnmp authorization read-only
+set snmp community ppsnmp clients 151.216.6.0/27
+set routing-options static route 0.0.0.0/0 next-hop 151.216.6.1
+set protocols igmp-snooping vlan all
+set protocols rstp
+set protocols lldp interface all
+set protocols lldp-med interface all
+set policy-options prefix-list partynett 151.216.4.0/22
+set policy-options prefix-list partynett 2a03:94e0:1337::/48
+set firewall family inet filter mgmtfilter term accept-ssh from source-prefix-list partynett
+set firewall family inet filter mgmtfilter term accept-ssh from protocol tcp
+set firewall family inet filter mgmtfilter term accept-ssh from destination-port ssh
+set firewall family inet filter mgmtfilter term accept-ssh then accept
+set firewall family inet filter mgmtfilter term accept-snmp from source-prefix-list partynett
+set firewall family inet filter mgmtfilter term accept-snmp from protocol udp
+set firewall family inet filter mgmtfilter term accept-snmp from destination-port snmp
+set firewall family inet filter mgmtfilter term deny-ssh from protocol tcp
+set firewall family inet filter mgmtfilter term deny-ssh from destination-port ssh
+set firewall family inet filter mgmtfilter term deny-ssh then discard
+set firewall family inet filter mgmtfilter term deny-snmp from protocol udp
+set firewall family inet filter mgmtfilter term deny-snmp from destination-port 161
+set firewall family inet filter mgmtfilter term deny-snmp then discard
+set firewall family inet filter mgmtfilter term default-accept then accept
+set firewall family inet6 filter mgmt6filter term accept-ssh from source-prefix-list partynett
+set firewall family inet6 filter mgmt6filter term accept-ssh from destination-port ssh
+set firewall family inet6 filter mgmt6filter term accept-ssh then accept
+set firewall family inet6 filter mgmt6filter term deny-ssh from destination-port ssh
+set firewall family inet6 filter mgmt6filter term deny-ssh then discard
+set firewall family inet6 filter mgmt6filter term deny-snmp from destination-port 161
+set firewall family inet6 filter mgmt6filter term deny-snmp then discard
+set firewall family inet6 filter mgmt6filter term default-accept then accept
+set virtual-chassis preprovisioned
+set virtual-chassis vcp-snmp-statistics
+set virtual-chassis member 0 role routing-engine
+set virtual-chassis member 0 serial-number GB0214420465
+set virtual-chassis member 0 location Telenorburet
+set virtual-chassis member 1 role line-card
+set virtual-chassis member 1 serial-number GB0214420510
+set virtual-chassis member 1 location Crew
+set virtual-chassis member 2 role line-card
+set virtual-chassis member 2 serial-number GB0214420479
+set virtual-chassis member 2 location East
+set virtual-chassis member 3 role line-card
+set virtual-chassis member 3 serial-number GB0214420516
+set virtual-chassis member 3 location Center
+set virtual-chassis member 4 role line-card
+set virtual-chassis member 4 serial-number GB0214420469
+set virtual-chassis member 4 location West
+set ethernet-switching-options storm-control interface all
+set vlans Crew vlan-id 900
+set vlans Crew vlan-prune
+set vlans InngangKantine vlan-id 970
+set vlans InngangKantine vlan-prune
+set vlans MediaIntern vlan-id 1336
+set vlans SceneMedia vlan-id 950
+set vlans Tech vlan-id 1337
+set vlans Tech l3-interface vlan.1337
+set vlans Tech vlan-prune
+set vlans WIFI vlan-id 802
+set vlans WIFI vlan-prune
+set vlans default l3-interface vlan.0
+set vlans rad1-1 vlan-id 101
+set vlans rad1-2 vlan-id 102
+set vlans rad1-3 vlan-id 103
+set vlans rad11-1 vlan-id 1101
+set vlans rad11-2 vlan-id 1102
+set vlans rad11-3 vlan-id 1103
+set vlans rad13-1 vlan-id 1301
+set vlans rad13-2 vlan-id 1302
+set vlans rad13-3 vlan-id 1303
+set vlans rad15-1 vlan-id 1501
+set vlans rad15-2 vlan-id 1502
+set vlans rad17-1 vlan-id 1701
+set vlans rad17-2 vlan-id 1702
+set vlans rad3-1 vlan-id 301
+set vlans rad3-2 vlan-id 302
+set vlans rad3-3 vlan-id 303
+set vlans rad5-1 vlan-id 501
+set vlans rad5-2 vlan-id 502
+set vlans rad5-3 vlan-id 503
+set vlans rad7-1 vlan-id 701
+set vlans rad7-2 vlan-id 702
+set vlans rad7-3 vlan-id 703
+set vlans rad9-1 vlan-id 901
+set vlans rad9-2 vlan-id 902
+set vlans rad9-3 vlan-id 903
+set poe interface all

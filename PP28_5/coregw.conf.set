@@ -1,0 +1,382 @@
+set version 16.1R7.8
+set system host-name CoreGW
+set system auto-snapshot
+set system root-authentication encrypted-password ***
+set system name-server 151.216.6.4
+set system name-server 1.1.1.1
+set system login user mathias full-name Beta
+set system login user mathias uid 2004
+set system login user mathias class super-user
+set system login user mathias authentication encrypted-password ***
+set system login user tech full-name PP28.5Tech
+set system login user tech uid 2005
+set system login user tech class super-user
+set system login user tech authentication encrypted-password ***
+set system services ssh root-login deny
+set system services ssh protocol-version v2
+set system syslog user * any emergency
+set system syslog host pride.pp285.polar.party any any
+set system syslog host pride.pp285.polar.party port 514
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system syslog file interactive-commands interactive-commands any
+set system archival configuration transfer-on-commit
+set system archival configuration archive-sites "scp://tech@greed.pp285.polar.party:/home/tech/configs/" password ***
+set system processes dhcp-service traceoptions file dhcp_logfile
+set system processes dhcp-service traceoptions file size 10m
+set system processes dhcp-service traceoptions level all
+set system processes dhcp-service traceoptions flag all
+set system ntp server 77.40.226.114
+set chassis alarm ethernet link-down ignore
+set security ssh-known-hosts host greed.pp285.polar.party,151.216.6.4 ecdsa-sha2-nistp256-key AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHmyXPJ6QIn3C4zaR7zM98mNJqmu2SaX9J1QS6lH21HvJTkA8DfqJGlWfANSUfkZjhHFPUxOrh2SqTsK6c5RXmM=
+set interfaces interface-range WIFI member-range ge-0/0/20 to ge-0/0/23
+set interfaces interface-range WIFI description WIFI
+set interfaces interface-range WIFI unit 0 family ethernet-switching vlan members WIFI
+set interfaces ge-0/0/0 unit 0 family ethernet-switching vlan members Tech
+set interfaces ge-0/0/0 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/1 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/2 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/3 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/4 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/5 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/6 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/7 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/8 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/9 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/10 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/11 description Burgerskriver
+set interfaces ge-0/0/11 unit 0 family ethernet-switching vlan members InngangKantine
+set interfaces ge-0/0/11 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/12 description "CoreGW -> Kantine"
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members InngangKantine
+set interfaces ge-0/0/12 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/13 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/14 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/15 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/16 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/17 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/18 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/19 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/20 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/21 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/22 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/23 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/2/0 unit 0 family ethernet-switching storm-control default
+set interfaces xe-0/2/0 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/2/1 unit 0 family ethernet-switching storm-control default
+set interfaces xe-0/2/1 description "CoreGW -> Hyperloop"
+set interfaces xe-0/2/1 unit 0 family ethernet-switching interface-mode trunk
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members Tech
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members WIFI
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad1-1
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad1-2
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad1-3
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad11-1
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad11-2
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad11-3
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad13-1
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad13-2
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad13-3
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad15-1
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad15-2
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad17-1
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad17-2
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad3-1
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad3-2
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad3-3
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad5-1
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad5-2
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad5-3
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad7-1
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad7-2
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad7-3
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad9-1
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad9-2
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members rad9-3
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members Crew
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members InngangKantine
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members SceneMedia
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members MediaIntern
+set interfaces xe-0/2/1 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/2/2 unit 0 family ethernet-switching storm-control default
+set interfaces xe-0/2/2 description "CoreGW -> Lust"
+set interfaces xe-0/2/2 native-vlan-id 1337
+set interfaces xe-0/2/2 unit 0 family ethernet-switching interface-mode trunk
+set interfaces xe-0/2/2 unit 0 family ethernet-switching vlan members MediaIntern
+set interfaces xe-0/2/2 unit 0 family ethernet-switching vlan members Tech
+set interfaces xe-0/2/2 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/2/3 unit 0 family ethernet-switching storm-control default
+set interfaces xe-0/2/3 description LinkTerrahost
+set interfaces xe-0/2/3 unit 0 family ethernet-switching vlan members LinkTerrahost
+set interfaces xe-0/2/3 unit 0 family ethernet-switching storm-control default
+set interfaces irb unit 0 family inet dhcp vendor-id Juniper-ex4300-24t
+set interfaces irb unit 101 family inet address 151.216.6.33/28
+set interfaces irb unit 101 family inet6 address 2a03:94e0:1337:f101::/64 eui-64
+set interfaces irb unit 102 family inet address 151.216.6.49/28
+set interfaces irb unit 102 family inet6 address 2a03:94e0:1337:f102::/64 eui-64
+set interfaces irb unit 103 family inet address 151.216.6.65/28
+set interfaces irb unit 103 family inet6 address 2a03:94e0:1337:f103::/64 eui-64
+set interfaces irb unit 301 family inet address 151.216.6.81/28
+set interfaces irb unit 301 family inet6 address 2a03:94e0:1337:f301::/64 eui-64
+set interfaces irb unit 302 family inet address 151.216.6.97/28
+set interfaces irb unit 302 family inet6 address 2a03:94e0:1337:f302::/64 eui-64
+set interfaces irb unit 303 family inet address 151.216.6.113/28
+set interfaces irb unit 303 family inet6 address 2a03:94e0:1337:f303::/64 eui-64
+set interfaces irb unit 501 family inet address 151.216.6.129/28
+set interfaces irb unit 501 family inet6 address 2a03:94e0:1337:f501::/64 eui-64
+set interfaces irb unit 502 family inet address 151.216.6.145/28
+set interfaces irb unit 502 family inet6 address 2a03:94e0:1337:f502::/64 eui-64
+set interfaces irb unit 503 family inet address 151.216.6.161/28
+set interfaces irb unit 503 family inet6 address 2a03:94e0:1337:f503::/64 eui-64
+set interfaces irb unit 701 family inet address 151.216.6.177/28
+set interfaces irb unit 701 family inet6 address 2a03:94e0:1337:f701::/64 eui-64
+set interfaces irb unit 702 family inet address 151.216.6.193/28
+set interfaces irb unit 702 family inet6 address 2a03:94e0:1337:f702::/64 eui-64
+set interfaces irb unit 703 family inet address 151.216.6.209/28
+set interfaces irb unit 703 family inet6 address 2a03:94e0:1337:f703::/64 eui-64
+set interfaces irb unit 800 description LinkTerrahost
+set interfaces irb unit 800 family inet filter input kitchenprinterfilter
+set interfaces irb unit 800 family inet address 185.125.170.14/30
+set interfaces irb unit 800 family inet6 address 2a03:94e0:f13::1/127
+set interfaces irb unit 802 family inet address 151.216.4.1/24
+set interfaces irb unit 802 family inet6 address 2a03:94e0:1337:802::/64 eui-64
+set interfaces irb unit 900 family inet address 151.216.5.1/25
+set interfaces irb unit 900 family inet6 address 2a03:94e0:1337:f900::/64 eui-64
+set interfaces irb unit 901 family inet address 151.216.6.225/28
+set interfaces irb unit 901 family inet6 address 2a03:94e0:1337:f901::/64 eui-64
+set interfaces irb unit 902 family inet address 151.216.6.241/28
+set interfaces irb unit 902 family inet6 address 2a03:94e0:1337:f902::/64 eui-64
+set interfaces irb unit 903 family inet address 151.216.7.1/28
+set interfaces irb unit 903 family inet6 address 2a03:94e0:1337:f903::/64 eui-64
+set interfaces irb unit 950 family inet address 151.216.5.129/26
+set interfaces irb unit 950 family inet6 address 2a03:94e0:1337:f950::/64 eui-64
+set interfaces irb unit 970 family inet address 151.216.5.193/26
+set interfaces irb unit 1101 family inet address 151.216.7.17/28
+set interfaces irb unit 1101 family inet6 address 2a03:94e0:1337:1101::/64 eui-64
+set interfaces irb unit 1102 family inet address 151.216.7.33/28
+set interfaces irb unit 1102 family inet6 address 2a03:94e0:1337:1102::/64 eui-64
+set interfaces irb unit 1103 family inet address 151.216.7.49/28
+set interfaces irb unit 1103 family inet6 address 2a03:94e0:1337:1103::/64 eui-64
+set interfaces irb unit 1301 family inet address 151.216.7.65/28
+set interfaces irb unit 1301 family inet6 address 2a03:94e0:1337:1301::/64 eui-64
+set interfaces irb unit 1302 family inet address 151.216.7.81/28
+set interfaces irb unit 1302 family inet6 address 2a03:94e0:1337:1302::/64 eui-64
+set interfaces irb unit 1303 family inet address 151.216.7.97/28
+set interfaces irb unit 1303 family inet6 address 2a03:94e0:1337:1303::/64 eui-64
+set interfaces irb unit 1337 description Tech
+set interfaces irb unit 1337 family inet address 151.216.6.1/27
+set interfaces irb unit 1337 family inet6 address 2a03:94e0:1337:1337::/64 eui-64
+set interfaces irb unit 1501 family inet address 151.216.7.113/28
+set interfaces irb unit 1501 family inet6 address 2a03:94e0:1337:1501::/64 eui-64
+set interfaces irb unit 1502 family inet address 151.216.7.129/28
+set interfaces irb unit 1502 family inet6 address 2a03:94e0:1337:1502::/64 eui-64
+set interfaces irb unit 1701 family inet address 151.216.7.145/28
+set interfaces irb unit 1701 family inet6 address 2a03:94e0:1337:1701::/64 eui-64
+set interfaces irb unit 1702 family inet address 151.216.7.161/28
+set interfaces irb unit 1702 family inet6 address 2a03:94e0:1337:1702::/64 eui-64
+set interfaces lo0 unit 0 family inet filter input mgmtfilter
+set interfaces lo0 unit 0 family inet6 filter input mgmt6filter
+set interfaces vme unit 0 family inet dhcp vendor-id Juniper-ex4300-24t
+set snmp location "Slagenhallen, Norway"
+set snmp community ppsnmp authorization read-only
+set snmp community ppsnmp clients 151.216.6.0/27
+set forwarding-options storm-control-profiles default all
+set forwarding-options dhcp-relay server-group DHCP 151.216.6.4
+set forwarding-options dhcp-relay active-server-group DHCP
+set forwarding-options dhcp-relay group all interface irb.101
+set forwarding-options dhcp-relay group all interface irb.102
+set forwarding-options dhcp-relay group all interface irb.103
+set forwarding-options dhcp-relay group all interface irb.301
+set forwarding-options dhcp-relay group all interface irb.302
+set forwarding-options dhcp-relay group all interface irb.303
+set forwarding-options dhcp-relay group all interface irb.501
+set forwarding-options dhcp-relay group all interface irb.502
+set forwarding-options dhcp-relay group all interface irb.503
+set forwarding-options dhcp-relay group all interface irb.701
+set forwarding-options dhcp-relay group all interface irb.702
+set forwarding-options dhcp-relay group all interface irb.703
+set forwarding-options dhcp-relay group all interface irb.802
+set forwarding-options dhcp-relay group all interface irb.900
+set forwarding-options dhcp-relay group all interface irb.901
+set forwarding-options dhcp-relay group all interface irb.902
+set forwarding-options dhcp-relay group all interface irb.903
+set forwarding-options dhcp-relay group all interface irb.950
+set forwarding-options dhcp-relay group all interface irb.970
+set forwarding-options dhcp-relay group all interface irb.1101
+set forwarding-options dhcp-relay group all interface irb.1102
+set forwarding-options dhcp-relay group all interface irb.1103
+set forwarding-options dhcp-relay group all interface irb.1301
+set forwarding-options dhcp-relay group all interface irb.1302
+set forwarding-options dhcp-relay group all interface irb.1303
+set forwarding-options dhcp-relay group all interface irb.1501
+set forwarding-options dhcp-relay group all interface irb.1502
+set forwarding-options dhcp-relay group all interface irb.1701
+set forwarding-options dhcp-relay group all interface irb.1702
+set routing-options rib inet6.0 static route ::/0 next-hop 2a03:94e0:f13::
+set routing-options static route 151.216.4.0/22 discard
+set routing-options static route 0.0.0.0/0 next-hop 185.125.170.13
+set protocols router-advertisement interface irb.1337 prefix 2a03:94e0:1337:1337::/64
+set protocols router-advertisement interface irb.802 prefix 2a03:94e0:1337:802::/64
+set protocols router-advertisement interface irb.101 prefix 2a03:94e0:1337:f101::/64
+set protocols router-advertisement interface irb.102 prefix 2a03:94e0:1337:f102::/64
+set protocols router-advertisement interface irb.103 prefix 2a03:94e0:1337:f103::/64
+set protocols router-advertisement interface irb.301 prefix 2a03:94e0:1337:f301::/64
+set protocols router-advertisement interface irb.302 prefix 2a03:94e0:1337:f302::/64
+set protocols router-advertisement interface irb.303 prefix 2a03:94e0:1337:f303::/64
+set protocols router-advertisement interface irb.501 prefix 2a03:94e0:1337:f501::/64
+set protocols router-advertisement interface irb.502 prefix 2a03:94e0:1337:f502::/64
+set protocols router-advertisement interface irb.503 prefix 2a03:94e0:1337:f503::/64
+set protocols router-advertisement interface irb.701 prefix 2a03:94e0:1337:f701::/64
+set protocols router-advertisement interface irb.702 prefix 2a03:94e0:1337:f702::/64
+set protocols router-advertisement interface irb.703 prefix 2a03:94e0:1337:f703::/64
+set protocols router-advertisement interface irb.901 prefix 2a03:94e0:1337:f901::/64
+set protocols router-advertisement interface irb.902 prefix 2a03:94e0:1337:f902::/64
+set protocols router-advertisement interface irb.903 prefix 2a03:94e0:1337:f903::/64
+set protocols router-advertisement interface irb.1101 prefix 2a03:94e0:1337:1101::/64
+set protocols router-advertisement interface irb.1102 prefix 2a03:94e0:1337:1102::/64
+set protocols router-advertisement interface irb.1103 prefix 2a03:94e0:1337:1103::/64
+set protocols router-advertisement interface irb.1301 prefix 2a03:94e0:1337:1301::/64
+set protocols router-advertisement interface irb.1302 prefix 2a03:94e0:1337:1302::/64
+set protocols router-advertisement interface irb.1303 prefix 2a03:94e0:1337:1303::/64
+set protocols router-advertisement interface irb.1501 prefix 2a03:94e0:1337:1501::/64
+set protocols router-advertisement interface irb.1502 prefix 2a03:94e0:1337:1502::/64
+set protocols router-advertisement interface irb.1701 prefix 2a03:94e0:1337:1701::/64
+set protocols router-advertisement interface irb.1702 prefix 2a03:94e0:1337:1702::/64
+set protocols router-advertisement interface irb.900 prefix 2a03:94e0:1337:f900::/64
+set protocols router-advertisement interface irb.950 prefix 2a03:94e0:1337:f950::/64
+set protocols lldp interface all
+set protocols lldp-med interface all
+set protocols igmp-snooping vlan default
+set protocols sflow agent-id 151.216.6.1
+set protocols sflow polling-interval 1
+set protocols sflow sample-rate ingress 1000
+set protocols sflow sample-rate egress 1000
+set protocols sflow collector 151.216.6.5 udp-port 6363
+set protocols sflow interfaces ge-0/0/0.0
+set protocols sflow interfaces ge-0/0/1.0
+set protocols sflow interfaces ge-0/0/2.0
+set protocols sflow interfaces ge-0/0/3.0
+set protocols sflow interfaces ge-0/0/4.0
+set protocols sflow interfaces ge-0/0/5.0
+set protocols sflow interfaces ge-0/0/6.0
+set protocols sflow interfaces ge-0/0/7.0
+set protocols sflow interfaces ge-0/0/8.0
+set protocols sflow interfaces ge-0/0/9.0
+set protocols sflow interfaces ge-0/0/10.0
+set protocols sflow interfaces ge-0/0/11.0
+set protocols sflow interfaces ge-0/0/12.0
+set protocols sflow interfaces ge-0/0/13.0
+set protocols sflow interfaces ge-0/0/14.0
+set protocols sflow interfaces ge-0/0/15.0
+set protocols sflow interfaces ge-0/0/16.0
+set protocols sflow interfaces ge-0/0/17.0
+set protocols sflow interfaces ge-0/0/18.0
+set protocols sflow interfaces ge-0/0/19.0
+set protocols sflow interfaces ge-0/0/20.0
+set protocols sflow interfaces ge-0/0/21.0
+set protocols sflow interfaces ge-0/0/22.0
+set protocols sflow interfaces ge-0/0/23.0
+set protocols sflow interfaces xe-0/2/1.0
+set protocols sflow interfaces xe-0/2/2.0
+set protocols sflow interfaces xe-0/2/3.0
+set protocols rstp interface all
+set policy-options prefix-list partynett 151.216.4.0/22
+set policy-options prefix-list partynett 2a03:94e0:1337::/48
+set firewall family inet filter mgmtfilter term accept-ssh from source-prefix-list partynett
+set firewall family inet filter mgmtfilter term accept-ssh from protocol tcp
+set firewall family inet filter mgmtfilter term accept-ssh from destination-port ssh
+set firewall family inet filter mgmtfilter term accept-ssh then accept
+set firewall family inet filter mgmtfilter term accept-snmp from source-prefix-list partynett
+set firewall family inet filter mgmtfilter term accept-snmp from protocol udp
+set firewall family inet filter mgmtfilter term accept-snmp from destination-port snmp
+set firewall family inet filter mgmtfilter term deny-ssh from protocol tcp
+set firewall family inet filter mgmtfilter term deny-ssh from destination-port ssh
+set firewall family inet filter mgmtfilter term deny-ssh then discard
+set firewall family inet filter mgmtfilter term deny-snmp from protocol udp
+set firewall family inet filter mgmtfilter term deny-snmp from destination-port 161
+set firewall family inet filter mgmtfilter term deny-snmp then discard
+set firewall family inet filter mgmtfilter term default-accept then accept
+set firewall family inet filter telnetfilter term accept-telnet from source-prefix-list partynett
+set firewall family inet filter telnetfilter term accept-telnet from protocol tcp
+set firewall family inet filter telnetfilter term accept-telnet from destination-port telnet
+set firewall family inet filter telnetfilter term deny-telnet from protocol tcp
+set firewall family inet filter telnetfilter term deny-telnet from destination-port telnet
+set firewall family inet filter telnetfilter term deny-telnet then discard
+set firewall family inet filter telnetfilter term default-accept then accept
+set firewall family inet filter kitchenprinterfilter term deny-all from destination-address 151.216.5.254/32
+set firewall family inet filter kitchenprinterfilter term deny-all from destination-address 151.216.5.253/32
+set firewall family inet filter kitchenprinterfilter term deny-all then discard
+set firewall family inet filter kitchenprinterfilter term default-accept then accept
+set firewall family inet6 filter mgmt6filter term accept-ssh from source-prefix-list partynett
+set firewall family inet6 filter mgmt6filter term accept-ssh from destination-port ssh
+set firewall family inet6 filter mgmt6filter term accept-ssh then accept
+set firewall family inet6 filter mgmt6filter term deny-ssh from destination-port ssh
+set firewall family inet6 filter mgmt6filter term deny-ssh then discard
+set firewall family inet6 filter mgmt6filter term deny-snmp from destination-port 161
+set firewall family inet6 filter mgmt6filter term deny-snmp then discard
+set firewall family inet6 filter mgmt6filter term default-accept then accept
+set vlans Crew vlan-id 900
+set vlans Crew l3-interface irb.900
+set vlans InngangKantine vlan-id 970
+set vlans InngangKantine l3-interface irb.970
+set vlans LinkTerrahost vlan-id 800
+set vlans LinkTerrahost l3-interface irb.800
+set vlans MediaIntern vlan-id 1336
+set vlans SceneMedia vlan-id 950
+set vlans SceneMedia l3-interface irb.950
+set vlans Tech vlan-id 1337
+set vlans Tech l3-interface irb.1337
+set vlans WIFI vlan-id 802
+set vlans WIFI l3-interface irb.802
+set vlans default vlan-id 1
+set vlans default l3-interface irb.0
+set vlans rad1-1 vlan-id 101
+set vlans rad1-1 l3-interface irb.101
+set vlans rad1-2 vlan-id 102
+set vlans rad1-2 l3-interface irb.102
+set vlans rad1-3 vlan-id 103
+set vlans rad1-3 l3-interface irb.103
+set vlans rad11-1 vlan-id 1101
+set vlans rad11-1 l3-interface irb.1101
+set vlans rad11-2 vlan-id 1102
+set vlans rad11-2 l3-interface irb.1102
+set vlans rad11-3 vlan-id 1103
+set vlans rad11-3 l3-interface irb.1103
+set vlans rad13-1 vlan-id 1301
+set vlans rad13-1 l3-interface irb.1301
+set vlans rad13-2 vlan-id 1302
+set vlans rad13-2 l3-interface irb.1302
+set vlans rad13-3 vlan-id 1303
+set vlans rad13-3 l3-interface irb.1303
+set vlans rad15-1 vlan-id 1501
+set vlans rad15-1 l3-interface irb.1501
+set vlans rad15-2 vlan-id 1502
+set vlans rad15-2 l3-interface irb.1502
+set vlans rad17-1 vlan-id 1701
+set vlans rad17-1 l3-interface irb.1701
+set vlans rad17-2 vlan-id 1702
+set vlans rad17-2 l3-interface irb.1702
+set vlans rad3-1 vlan-id 301
+set vlans rad3-1 l3-interface irb.301
+set vlans rad3-2 vlan-id 302
+set vlans rad3-2 l3-interface irb.302
+set vlans rad3-3 vlan-id 303
+set vlans rad3-3 l3-interface irb.303
+set vlans rad5-1 vlan-id 501
+set vlans rad5-1 l3-interface irb.501
+set vlans rad5-2 vlan-id 502
+set vlans rad5-2 l3-interface irb.502
+set vlans rad5-3 vlan-id 503
+set vlans rad5-3 l3-interface irb.503
+set vlans rad7-1 vlan-id 701
+set vlans rad7-1 l3-interface irb.701
+set vlans rad7-2 vlan-id 702
+set vlans rad7-2 l3-interface irb.702
+set vlans rad7-3 vlan-id 703
+set vlans rad7-3 l3-interface irb.703
+set vlans rad9-1 vlan-id 901
+set vlans rad9-1 l3-interface irb.901
+set vlans rad9-2 vlan-id 902
+set vlans rad9-2 l3-interface irb.902
+set vlans rad9-3 vlan-id 903
+set vlans rad9-3 l3-interface irb.903
