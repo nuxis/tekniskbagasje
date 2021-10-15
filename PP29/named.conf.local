@@ -1,0 +1,55 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+include "/etc/bind/zones.rfc1918";
+
+zone "pp29.polarparty.no" {
+	type slave;
+	masters { 185.243.217.14; };
+	file "/var/cache/bind/db.pp29.polarparty.no";
+};
+
+zone "16.216.151.in-addr.arpa" {
+	type slave;
+	masters { 185.243.217.14; };
+	file "/var/cache/bind/db.16.216.151.in-addr.arpa";
+};
+zone "17.216.151.in-addr.arpa" {
+	type slave;
+	masters { 185.243.217.14; };
+	file "/var/cache/bind/db.17.216.151.in-addr.arpa";
+};
+zone "18.216.151.in-addr.arpa" {
+	type slave;
+	masters { 185.243.217.14; };
+	file "/var/cache/bind/db.18.216.151.in-addr.arpa";
+};
+zone "19.216.151.in-addr.arpa" {
+	type slave;
+	masters { 185.243.217.14; };
+	file "/var/cache/bind/db.19.216.151.in-addr.arpa";
+};
+zone "20.216.151.in-addr.arpa" {
+	type slave;
+	masters { 185.243.217.14; };
+	file "/var/cache/bind/db.20.216.151.in-addr.arpa";
+};
+zone "21.216.151.in-addr.arpa" {
+	type slave;
+	masters { 185.243.217.14; };
+	file "/var/cache/bind/db.21.216.151.in-addr.arpa";
+};
+zone "22.216.151.in-addr.arpa" {
+	type slave;
+	masters { 185.243.217.14; };
+	file "/var/cache/bind/db.22.216.151.in-addr.arpa";
+};
+zone "23.216.151.in-addr.arpa" {
+	type slave;
+	masters { 185.243.217.14; };
+	file "/var/cache/bind/db.23.216.151.in-addr.arpa";
+};
+

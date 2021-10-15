@@ -1,0 +1,381 @@
+set version 16.1R7.8
+set system host-name kongenpaahaugen
+set system auto-snapshot
+set system time-zone Europe/Oslo
+set system root-authentication encrypted-password "***"
+set system name-server 1.1.1.1
+set system name-server 2606:4700:4700::1111
+set system name-server 151.216.18.4
+set system login user mathias uid 2002
+set system login user mathias class super-user
+set system login user mathias authentication ssh-rsa "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDDuN6mPE5gEe2sMOrzx3qGUE/XtIcrS07U+ipwMTYldZO513FFyaW5KG9TGc9XDdRE9VReADe+uDNnRY8UGiLyOze3eZY+FuOL4lt1bOVgXcNL4dxHNvWixL+J1C4hxfTl8Weugg64mDndpe9dndrOdl2ByW8WpWoxElqK9qpv4yrUV5U+f11yiPnqXXmzTr0LMmm6w37Fe3ZocawDR2EMN7JEOuEsKxxzo/GjjL13ORFp11pXyOab1lNO+F3MjvZFyGwa1XiJZWcEQn8iX+PW0ZzArcE1tMaR0V+aDIf6kDImoalcAtNikthajZgM+N7Us5mbc06CkNKroHqlW+IRIU4S6aqXD0r0n8sSBcfWxACUiwKcLV+UEp3ifBnHWR3BPNTebUvbVOypLT66QruWyNSauSfLriByuLFesSXfVCCC9cMPPP8XwEhmTP8NsAzJ6yUmY75EssEGzGK3+qFm+4OkZVy3iBqQlhzwbSN8//IN3OHcKebshS1YmTOMRHk= mathias@mlap"
+set system login user mathiasn uid 2000
+set system login user mathiasn class super-user
+set system login user mathiasn authentication encrypted-password "***"
+set system login user tech uid 2001
+set system login user tech class super-user
+set system login user tech authentication encrypted-password "***"
+set system services ssh root-login deny
+set system services ssh protocol-version v2
+set system services netconf ssh
+set system syslog user * any emergency
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system syslog file interactive-commands interactive-commands any
+set system archival configuration transfer-on-commit
+set system archival configuration archive-sites "scp://lager:***@stivheks.pp29.polarparty.no/home/lager/"
+set system processes dhcp-service traceoptions file dhcp_logfile
+set system processes dhcp-service traceoptions file size 10m
+set system processes dhcp-service traceoptions level all
+set system processes dhcp-service traceoptions flag all
+set system ntp server 77.40.226.121
+set security ssh-known-hosts host stivheks.pp29.polarparty.no,2a03:94e0:1337:1337::5 ecdsa-sha2-nistp256-key AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLMv7KLjMly3C60uo5trhAUpvFv73wLKp21NErjSgUe54KXQAcTaZhLXAQr6Kos8Yx4mO9e0cj7yqAFrwmRfYYI=
+set interfaces interface-range Tech member-range ge-0/0/0 to ge-0/0/11
+set interfaces interface-range Tech unit 0 family ethernet-switching vlan members Tech
+set interfaces interface-range WLAN member-range ge-0/0/20 to ge-0/0/23
+set interfaces interface-range WLAN member-range ge-1/0/20 to ge-1/0/23
+set interfaces interface-range WLAN unit 0 family ethernet-switching vlan members WLAN
+set interfaces ge-0/0/0 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/1 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/2 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/3 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/4 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/5 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/6 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/7 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/8 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/9 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/10 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/11 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/12 unit 0 family ethernet-switching vlan members InngangKantine
+set interfaces ge-0/0/12 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/13 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/14 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/15 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/16 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/17 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/18 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/19 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/20 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/21 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/22 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/0/23 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/2/0 unit 0 family ethernet-switching storm-control default
+set interfaces xe-0/2/0 description LinkTerrahost
+set interfaces xe-0/2/0 unit 0 family ethernet-switching vlan members LinkTerrahost
+set interfaces xe-0/2/0 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/2/1 unit 0 family ethernet-switching storm-control default
+set interfaces xe-0/2/1 description PolarVM
+set interfaces xe-0/2/1 native-vlan-id 1337
+set interfaces xe-0/2/1 unit 0 family ethernet-switching interface-mode trunk
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members Tech
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members MediaIntern
+set interfaces xe-0/2/1 unit 0 family ethernet-switching vlan members SceneMedia
+set interfaces xe-0/2/1 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/2/2 unit 0 family ethernet-switching storm-control default
+set interfaces xe-0/2/2 unit 0 family ethernet-switching storm-control default
+set interfaces ge-0/2/3 unit 0 family ethernet-switching storm-control default
+set interfaces xe-0/2/3 unit 0 family ethernet-switching storm-control default
+set interfaces ge-1/0/0 description Oppriggskamera
+set interfaces ge-1/0/0 unit 0 family ethernet-switching vlan members SceneMedia
+set interfaces xe-1/2/0 description "Core: slaaparing"
+set interfaces xe-1/2/0 unit 0 family ethernet-switching interface-mode trunk
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Tech
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members WLAN
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Crew
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members SceneMedia
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members MediaIntern
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Rad01
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Rad02
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Rad03
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Rad04
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Rad05
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Rad06
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Rad07
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Rad08
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Rad09
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Rad10
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Rad11
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Rad12
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Komfort1
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Komfort2
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Komfort3
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Komfort4
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Komfort5
+set interfaces xe-1/2/0 unit 0 family ethernet-switching vlan members Komfort6
+set interfaces xe-1/2/0 unit 0 family ethernet-switching storm-control default
+set interfaces irb unit 0 family inet dhcp vendor-id Juniper-ex4300-24t
+set interfaces irb unit 101 family inet address 151.216.19.65/27
+set interfaces irb unit 101 family inet6 address 2a03:94e0:1337:101::/64 eui-64
+set interfaces irb unit 102 family inet address 151.216.19.97/27
+set interfaces irb unit 102 family inet6 address 2a03:94e0:1337:102::/64 eui-64
+set interfaces irb unit 103 family inet address 151.216.19.129/27
+set interfaces irb unit 103 family inet6 address 2a03:94e0:1337:103::/64 eui-64
+set interfaces irb unit 104 family inet address 151.216.19.161/27
+set interfaces irb unit 104 family inet6 address 2a03:94e0:1337:104::/64 eui-64
+set interfaces irb unit 105 family inet address 151.216.19.193/27
+set interfaces irb unit 105 family inet6 address 2a03:94e0:1337:105::/64 eui-64
+set interfaces irb unit 106 family inet address 151.216.19.225/27
+set interfaces irb unit 106 family inet6 address 2a03:94e0:1337:106::/64 eui-64
+set interfaces irb unit 107 family inet address 151.216.20.1/27
+set interfaces irb unit 107 family inet6 address 2a03:94e0:1337:107::/64 eui-64
+set interfaces irb unit 108 family inet address 151.216.20.33/27
+set interfaces irb unit 108 family inet6 address 2a03:94e0:1337:108::/64 eui-64
+set interfaces irb unit 109 family inet address 151.216.20.65/27
+set interfaces irb unit 109 family inet6 address 2a03:94e0:1337:109::/64 eui-64
+set interfaces irb unit 110 family inet address 151.216.20.97/27
+set interfaces irb unit 110 family inet6 address 2a03:94e0:1337:110::/64 eui-64
+set interfaces irb unit 111 family inet address 151.216.20.129/27
+set interfaces irb unit 111 family inet6 address 2a03:94e0:1337:111::/64 eui-64
+set interfaces irb unit 112 family inet address 151.216.20.161/27
+set interfaces irb unit 112 family inet6 address 2a03:94e0:1337:112::/64 eui-64
+set interfaces irb unit 201 family inet address 151.216.21.193/28
+set interfaces irb unit 201 family inet6 address 2a03:94e0:1337:201::/64 eui-64
+set interfaces irb unit 202 family inet address 151.216.21.209/28
+set interfaces irb unit 202 family inet6 address 2a03:94e0:1337:202::/64 eui-64
+set interfaces irb unit 203 family inet address 151.216.21.225/28
+set interfaces irb unit 203 family inet6 address 2a03:94e0:1337:203::/64 eui-64
+set interfaces irb unit 204 family inet address 151.216.21.241/28
+set interfaces irb unit 204 family inet6 address 2a03:94e0:1337:204::/64 eui-64
+set interfaces irb unit 205 family inet address 151.216.22.1/28
+set interfaces irb unit 205 family inet6 address 2a03:94e0:1337:205::/64 eui-64
+set interfaces irb unit 206 family inet address 151.216.22.17/28
+set interfaces irb unit 206 family inet6 address 2a03:94e0:1337:206::/64 eui-64
+set interfaces irb unit 800 description "Transit: Terrahost"
+set interfaces irb unit 800 bandwidth 10g
+set interfaces irb unit 800 family inet filter input great-wall-of-pp-in-v4
+set interfaces irb unit 800 family inet filter output great-wall-of-pp-out-v4
+set interfaces irb unit 800 family inet address 185.125.170.14/30
+set interfaces irb unit 800 family inet6 address 2a03:94e0:f13::2/126
+set interfaces irb unit 802 description WLAN
+set interfaces irb unit 802 family inet address 151.216.16.1/23
+set interfaces irb unit 802 family inet6 address 2a03:94e0:1337:802::/64 eui-64
+set interfaces irb unit 900 family inet address 151.216.18.129/25
+set interfaces irb unit 900 family inet6 address 2a03:94e0:1337:900::/64 eui-64
+set interfaces irb unit 950 description SceneMedia
+set interfaces irb unit 950 family inet address 151.216.21.129/27
+set interfaces irb unit 950 family inet6 address 2a03:94e0:1337:950::/64 eui-64
+set interfaces irb unit 970 description InngangKantine
+set interfaces irb unit 970 family inet address 151.216.21.161/27
+set interfaces irb unit 1337 description Tech
+set interfaces irb unit 1337 family inet address 151.216.18.1/25
+set interfaces irb unit 1337 family inet6 address 2a03:94e0:1337:1337::/64 eui-64
+set interfaces lo0 unit 0 family inet filter input mgmt-v4
+set interfaces lo0 unit 0 family inet6 filter input mgmt-v6
+set interfaces vme unit 0 family inet dhcp vendor-id Juniper-ex4300-24t
+set snmp community DagensSNMP09 authorization read-only
+set forwarding-options storm-control-profiles default all
+set forwarding-options dhcp-relay server-group DHCP 151.216.18.4
+set forwarding-options dhcp-relay active-server-group DHCP
+set forwarding-options dhcp-relay group all interface irb.101
+set forwarding-options dhcp-relay group all interface irb.102
+set forwarding-options dhcp-relay group all interface irb.103
+set forwarding-options dhcp-relay group all interface irb.104
+set forwarding-options dhcp-relay group all interface irb.105
+set forwarding-options dhcp-relay group all interface irb.106
+set forwarding-options dhcp-relay group all interface irb.107
+set forwarding-options dhcp-relay group all interface irb.108
+set forwarding-options dhcp-relay group all interface irb.109
+set forwarding-options dhcp-relay group all interface irb.110
+set forwarding-options dhcp-relay group all interface irb.111
+set forwarding-options dhcp-relay group all interface irb.112
+set forwarding-options dhcp-relay group all interface irb.201
+set forwarding-options dhcp-relay group all interface irb.202
+set forwarding-options dhcp-relay group all interface irb.203
+set forwarding-options dhcp-relay group all interface irb.204
+set forwarding-options dhcp-relay group all interface irb.205
+set forwarding-options dhcp-relay group all interface irb.206
+set forwarding-options dhcp-relay group all interface irb.802
+set forwarding-options dhcp-relay group all interface irb.900
+set forwarding-options dhcp-relay group all interface irb.950
+set forwarding-options dhcp-relay group all interface irb.970
+set routing-options rib inet6.0 static route ::/0 next-hop 2a03:94e0:f13::1
+set routing-options static route 151.216.16.0/21 discard
+set routing-options static route 0.0.0.0/0 next-hop 185.125.170.13
+set protocols router-advertisement interface irb.1337 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.1337 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.1337 prefix 2a03:94e0:1337:1337::/64
+set protocols router-advertisement interface irb.802 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.802 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.802 prefix 2a03:94e0:1337:802::/64
+set protocols router-advertisement interface irb.950 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.950 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.950 prefix 2a03:94e0:1337:950::/64
+set protocols router-advertisement interface irb.900 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.900 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.900 prefix 2a03:94e0:1337:900::/64
+set protocols router-advertisement interface irb.101 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.101 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.101 prefix 2a03:94e0:1337:101::/64
+set protocols router-advertisement interface irb.102 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.102 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.102 prefix 2a03:94e0:1337:102::/64
+set protocols router-advertisement interface irb.103 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.103 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.103 prefix 2a03:94e0:1337:103::/64
+set protocols router-advertisement interface irb.104 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.104 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.104 prefix 2a03:94e0:1337:104::/64
+set protocols router-advertisement interface irb.105 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.105 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.105 prefix 2a03:94e0:1337:105::/64
+set protocols router-advertisement interface irb.106 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.106 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.106 prefix 2a03:94e0:1337:106::/64
+set protocols router-advertisement interface irb.107 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.107 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.107 prefix 2a03:94e0:1337:107::/64
+set protocols router-advertisement interface irb.108 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.108 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.108 prefix 2a03:94e0:1337:108::/64
+set protocols router-advertisement interface irb.109 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.109 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.109 prefix 2a03:94e0:1337:109::/64
+set protocols router-advertisement interface irb.110 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.110 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.110 prefix 2a03:94e0:1337:110::/64
+set protocols router-advertisement interface irb.111 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.111 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.111 prefix 2a03:94e0:1337:111::/64
+set protocols router-advertisement interface irb.112 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.112 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.112 prefix 2a03:94e0:1337:112::/64
+set protocols router-advertisement interface irb.201 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.201 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.201 prefix 2a03:94e0:1337:201::/64
+set protocols router-advertisement interface irb.202 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.202 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.202 prefix 2a03:94e0:1337:202::/64
+set protocols router-advertisement interface irb.203 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.203 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.203 prefix 2a03:94e0:1337:203::/64
+set protocols router-advertisement interface irb.204 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.204 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.204 prefix 2a03:94e0:1337:204::/64
+set protocols router-advertisement interface irb.205 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.205 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.205 prefix 2a03:94e0:1337:205::/64
+set protocols router-advertisement interface irb.206 dns-server-address 2606:4700:4700::1111
+set protocols router-advertisement interface irb.206 dns-server-address 2a03:94e0:1337:1337::4
+set protocols router-advertisement interface irb.206 prefix 2a03:94e0:1337:206::/64
+set protocols lldp interface all
+set protocols lldp-med interface all
+set protocols igmp-snooping vlan default
+set protocols rstp interface all
+set policy-options prefix-list inside-nets-v4 151.216.16.0/21
+set policy-options prefix-list inside-nets-v6 2a03:94e0:1337::/48
+set policy-options prefix-list mgt-nets-v4 151.216.16.0/21
+set policy-options prefix-list mgt-nets-v4 151.216.18.0/25
+set policy-options prefix-list mgt-nets-v6 2a03:94e0:1337:1337::/64
+set policy-options prefix-list spammers-v4 151.216.21.199/32
+set policy-options prefix-list tech-v4 151.216.18.0/24
+set firewall family inet filter mgmt-v4 term accept-ssh from source-prefix-list mgt-nets-v4
+set firewall family inet filter mgmt-v4 term accept-ssh from protocol tcp
+set firewall family inet filter mgmt-v4 term accept-ssh from destination-port ssh
+set firewall family inet filter mgmt-v4 term accept-ssh then accept
+set firewall family inet filter mgmt-v4 term accept-snmp from source-prefix-list mgt-nets-v4
+set firewall family inet filter mgmt-v4 term accept-snmp from protocol udp
+set firewall family inet filter mgmt-v4 term accept-snmp from destination-port snmp
+set firewall family inet filter mgmt-v4 term accept-snmp then accept
+set firewall family inet filter mgmt-v4 term accept-ntp from source-prefix-list mgt-nets-v4
+set firewall family inet filter mgmt-v4 term accept-ntp from protocol udp
+set firewall family inet filter mgmt-v4 term accept-ntp from destination-port ntp
+set firewall family inet filter mgmt-v4 term accept-ntp then accept
+set firewall family inet filter mgmt-v4 term deny-ssh from protocol tcp
+set firewall family inet filter mgmt-v4 term deny-ssh from destination-port ssh
+set firewall family inet filter mgmt-v4 term deny-ssh then discard
+set firewall family inet filter mgmt-v4 term deny-snmp from protocol udp
+set firewall family inet filter mgmt-v4 term deny-snmp from destination-port snmp
+set firewall family inet filter mgmt-v4 term deny-snmp then discard
+set firewall family inet filter mgmt-v4 term deny-ntp from protocol udp
+set firewall family inet filter mgmt-v4 term deny-ntp from destination-port ntp
+set firewall family inet filter mgmt-v4 term deny-ntp then discard
+set firewall family inet filter mgmt-v4 term default-accept then accept
+set firewall family inet filter great-wall-of-pp-in-v4 term deny-telnet from protocol tcp
+set firewall family inet filter great-wall-of-pp-in-v4 term deny-telnet from destination-port telnet
+set firewall family inet filter great-wall-of-pp-in-v4 term deny-telnet then discard
+set firewall family inet filter great-wall-of-pp-in-v4 term default-accept then accept
+set firewall family inet filter great-wall-of-pp-out-v4 term deny-spammers from source-prefix-list spammers-v4
+set firewall family inet filter great-wall-of-pp-out-v4 term deny-spammers from protocol tcp
+set firewall family inet filter great-wall-of-pp-out-v4 term deny-spammers from destination-port smtp
+set firewall family inet filter great-wall-of-pp-out-v4 term deny-spammers then discard
+set firewall family inet filter great-wall-of-pp-out-v4 term deny-tech-gta from source-prefix-list tech-v4
+set firewall family inet filter great-wall-of-pp-out-v4 term deny-tech-gta from protocol udp
+set firewall family inet filter great-wall-of-pp-out-v4 term deny-tech-gta from destination-port 6672
+set firewall family inet filter great-wall-of-pp-out-v4 term deny-tech-gta from destination-port 61455
+set firewall family inet filter great-wall-of-pp-out-v4 term deny-tech-gta from destination-port 61456
+set firewall family inet filter great-wall-of-pp-out-v4 term deny-tech-gta from destination-port 61457
+set firewall family inet filter great-wall-of-pp-out-v4 term deny-tech-gta from destination-port 61458
+set firewall family inet filter great-wall-of-pp-out-v4 term deny-tech-gta then accept
+set firewall family inet filter great-wall-of-pp-out-v4 term default-accept then accept
+set firewall family inet6 filter mgmt-v6 term accept-ssh from source-prefix-list mgt-nets-v6
+set firewall family inet6 filter mgmt-v6 term accept-ssh from destination-port ssh
+set firewall family inet6 filter mgmt-v6 term accept-ssh then accept
+set firewall family inet6 filter mgmt-v6 term accept-snmp from source-prefix-list mgt-nets-v6
+set firewall family inet6 filter mgmt-v6 term accept-snmp from destination-port snmp
+set firewall family inet6 filter mgmt-v6 term accept-snmp then accept
+set firewall family inet6 filter mgmt-v6 term accept-ntp from source-prefix-list mgt-nets-v6
+set firewall family inet6 filter mgmt-v6 term accept-ntp from destination-port ntp
+set firewall family inet6 filter mgmt-v6 term accept-ntp then accept
+set firewall family inet6 filter mgmt-v6 term deny-ssh from destination-port ssh
+set firewall family inet6 filter mgmt-v6 term deny-ssh then discard
+set firewall family inet6 filter mgmt-v6 term deny-snmp from destination-port snmp
+set firewall family inet6 filter mgmt-v6 term deny-snmp then discard
+set firewall family inet6 filter mgmt-v6 term deny-ntp from destination-port ntp
+set firewall family inet6 filter mgmt-v6 term deny-ntp then discard
+set firewall family inet6 filter mgmt-v6 term default-accept then accept
+set virtual-chassis preprovisioned
+set virtual-chassis no-split-detection
+set virtual-chassis member 1 role routing-engine
+set virtual-chassis member 1 serial-number PG3715020062
+set virtual-chassis member 0 role routing-engine
+set virtual-chassis member 0 serial-number PG3715020067
+set vlans Crew vlan-id 900
+set vlans Crew l3-interface irb.900
+set vlans InngangKantine vlan-id 970
+set vlans InngangKantine l3-interface irb.970
+set vlans Komfort1 vlan-id 201
+set vlans Komfort1 l3-interface irb.201
+set vlans Komfort2 vlan-id 202
+set vlans Komfort2 l3-interface irb.202
+set vlans Komfort3 vlan-id 203
+set vlans Komfort3 l3-interface irb.203
+set vlans Komfort4 vlan-id 204
+set vlans Komfort4 l3-interface irb.204
+set vlans Komfort5 vlan-id 205
+set vlans Komfort5 l3-interface irb.205
+set vlans Komfort6 vlan-id 206
+set vlans Komfort6 l3-interface irb.206
+set vlans LinkTerrahost vlan-id 800
+set vlans LinkTerrahost l3-interface irb.800
+set vlans MediaIntern vlan-id 1336
+set vlans Rad01 vlan-id 101
+set vlans Rad01 l3-interface irb.101
+set vlans Rad02 vlan-id 102
+set vlans Rad02 l3-interface irb.102
+set vlans Rad03 vlan-id 103
+set vlans Rad03 l3-interface irb.103
+set vlans Rad04 vlan-id 104
+set vlans Rad04 l3-interface irb.104
+set vlans Rad05 vlan-id 105
+set vlans Rad05 l3-interface irb.105
+set vlans Rad06 vlan-id 106
+set vlans Rad06 l3-interface irb.106
+set vlans Rad07 vlan-id 107
+set vlans Rad07 l3-interface irb.107
+set vlans Rad08 vlan-id 108
+set vlans Rad08 l3-interface irb.108
+set vlans Rad09 vlan-id 109
+set vlans Rad09 l3-interface irb.109
+set vlans Rad10 vlan-id 110
+set vlans Rad10 l3-interface irb.110
+set vlans Rad11 vlan-id 111
+set vlans Rad11 l3-interface irb.111
+set vlans Rad12 vlan-id 112
+set vlans Rad12 l3-interface irb.112
+set vlans SceneMedia vlan-id 950
+set vlans SceneMedia l3-interface irb.950
+set vlans Tech vlan-id 1337
+set vlans Tech l3-interface irb.1337
+set vlans WLAN vlan-id 802
+set vlans WLAN l3-interface irb.802
