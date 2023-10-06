@@ -1,0 +1,38 @@
+[
+  {
+    "network": "151.216.32.0/21",
+    "subnets": [
+      {
+        "size": 27,
+        "per-row": 1,
+        "name": "rad",
+        "number": 6
+      },
+      {
+        "size": 28,
+        "name": "komfort",
+        "number": 4
+      },
+      {
+        "size": 25,
+        "name": "tech"
+      },
+      {
+        "size": 23,
+        "name": "snorlaus"
+      },
+      {
+        "size": 26,
+        "name": "scene-media"
+      },
+      {
+        "size": 26,
+        "name": "inngang-kantine"
+      },
+      {
+        "size": 25,
+        "name": "crew"
+      }
+    ]
+  }
+]
