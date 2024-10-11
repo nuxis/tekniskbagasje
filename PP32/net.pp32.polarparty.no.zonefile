@@ -1,0 +1,72 @@
+$ORIGIN .
+$TTL 300        ; 5 minutes
+net.pp32.polarparty.no  IN SOA  dhcp31.pp32.polarparty.no. hostmaster.pp32.polarparty.no. (
+                                36         ; serial
+                                3600       ; refresh (1 hour)
+                                1800       ; retry (30 minutes)
+                                608400     ; expire (1 week 1 hour)
+                                3600       ; minimum (1 hour)
+                                )
+                        NS      dhcp31.pp32.polarparty.no.
+$ORIGIN net.pp32.polarparty.no.
+
+techgw                  A       151.216.70.1
+crewgw                  A       151.216.70.2
+radgw                   A       151.216.70.3
+
+techsw                  A       10.13.38.11
+
+crew1sw                 A       10.13.38.21
+crew2sw                 A       10.13.38.22
+crew3sw                 A       10.13.38.23
+crew4sw                 A       10.13.38.24
+
+inngangsw               A       10.13.38.31
+fohsw                   A       10.13.38.32
+scenesw                 A       10.13.38.33
+kantinesw               A       10.13.38.34
+foh2sw                  A       10.13.38.35
+
+rad1sw                  A       10.13.38.101
+rad2sw                  A       10.13.38.102
+rad3sw                  A       10.13.38.103
+rad4sw                  A       10.13.38.104
+rad8sw                  A       10.13.38.108
+rad9sw                  A       10.13.38.109
+rad10sw                 A       10.13.38.110
+rad11sw                 A       10.13.38.111
+
+
+stor1sw                 A       10.13.38.201
+stor2sw                 A       10.13.38.202
+stor3sw                 A       10.13.38.203
+
+
+wifi                    A       151.216.64.2
+
+;arkadesw               A       151.216.38.181
+;crewgw                 A       151.216.38.153
+;crewsw01               A       151.216.38.176
+;crewsw02               A       151.216.38.177
+;crewsw03               A       151.216.38.178
+;fohsw                  A       151.216.38.175
+;inngangsw              A       151.216.38.186
+;komfortsw01            A       151.216.38.169
+;mediacrewsw            A       151.216.38.165
+;nyekantinesw           A       151.216.38.180
+;radgw                  A       151.216.38.154
+;radsw01                        A       151.216.38.167
+;radsw02                        A       151.216.38.174
+;radsw03                        A       151.216.38.170
+;radsw05                        A       151.216.38.171
+;radsw06                        A       151.216.38.166
+;radsw07                        A       151.216.38.168
+;scenesw                        A       151.216.38.172
+;stabsw                 A       151.216.38.164
+;sw176                  A       151.216.38.176
+;sw177                  A       151.216.38.177
+;sw178                  A       151.216.38.178
+;techsw                 A       151.216.38.163
+;tekniskgw              A       151.216.38.152
+;teknisksw              A       151.216.38.162
+;wifi                   A       151.216.32.2
